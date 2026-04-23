@@ -1,0 +1,10 @@
+# Data files (keep these local, don't push to GitHub)
+*.csv
+
+# Design source files
+*.psd
+*.ai
+
+# OS files
+Thumbs.db
+.DS_Store
