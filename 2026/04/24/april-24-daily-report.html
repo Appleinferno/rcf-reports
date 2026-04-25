@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report — ReallyCheapFloors.com | April 24, 2026</title>
+    <meta name="description" content="WFH Daily Performance Report for ReallyCheapFloors.com — April 24, 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════
+           RESET & BASE
+           ═══════════════════════════════════════ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #FAF9F7;
+            color: #2D2A26;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ═══════════════════════════════════════
+           MASTHEAD
+           ═══════════════════════════════════════ */
+        .masthead {
+            background: #fff;
+            border-bottom: 1px solid #E8E5E0;
+            padding: 20px 0 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .masthead-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .masthead-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #8B7355;
+        }
+
+        .masthead-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .masthead-tag {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #fff;
+            background: #2D2A26;
+            padding: 5px 14px;
+            border-radius: 3px;
+        }
+
+        .masthead-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #9B9590;
+            letter-spacing: .04em;
+        }
+
+        /* ═══════════════════════════════════════
+           LAYOUT
+           ═══════════════════════════════════════ */
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px 40px;
+            border-bottom: 1px solid #E8E5E0;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 800;
+            color: #E8E5E0;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .section-title-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .section-platform {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #8B7355;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1A1816;
+            line-height: 1.2;
+        }
+
+        /* ═══════════════════════════════════════
+           COVER
+           ═══════════════════════════════════════ */
+        .cover {
+            padding: 72px 40px 56px;
+            border-bottom: 1px solid #E8E5E0;
+        }
+
+        .cover-overline {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: #8B7355;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cover-overline::before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 2px;
+            background: #8B7355;
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.08;
+            color: #1A1816;
+            letter-spacing: -.02em;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            color: #6B665F;
+            line-height: 1.6;
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+
+        .cover-kpi-row {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .cover-kpi {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            min-width: 180px;
+            flex: 1;
+            transition: box-shadow .3s;
+        }
+
+        .cover-kpi:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+        }
+
+        .kpi-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #9B9590;
+            margin-bottom: 6px;
+        }
+
+        .kpi-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1A1816;
+            line-height: 1.2;
+        }
+
+        .kpi-change {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .kpi-up {
+            color: #059669;
+        }
+
+        .kpi-down {
+            color: #DC2626;
+        }
+
+        .kpi-neutral {
+            color: #9B9590;
+        }
+
+        /* ═══════════════════════════════════════
+           TOC BAR
+           ═══════════════════════════════════════ */
+        .toc-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 40px;
+            border-bottom: 1px solid #E8E5E0;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .toc-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #9B9590;
+            flex-shrink: 0;
+        }
+
+        .toc-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .toc-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: #6B665F;
+            text-decoration: none;
+            padding: 6px 16px;
+            border: 1px solid #E8E5E0;
+            border-radius: 100px;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+
+        .toc-link:hover {
+            background: #2D2A26;
+            color: #fff;
+            border-color: #2D2A26;
+        }
+
+        /* ═══════════════════════════════════════
+           SNAPSHOT CARD
+           ═══════════════════════════════════════ */
+        .snapshot {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            padding: 36px;
+            margin-bottom: 32px;
+        }
+
+        .snapshot p {
+            font-size: 16px;
+            color: #4A4640;
+            line-height: 1.8;
+        }
+
+        .snapshot p strong {
+            color: #1A1816;
+        }
+
+        /* ═══════════════════════════════════════
+           DATA TABLES
+           ═══════════════════════════════════════ */
+        .data-table-wrap {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .data-table-header {
+            padding: 20px 28px 16px;
+            border-bottom: 1px solid #F3F1ED;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .data-table-header h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1816;
+        }
+
+        .data-table-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #9B9590;
+            letter-spacing: .03em;
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        table.data-table thead th {
+            text-align: left;
+            padding: 12px 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #9B9590;
+            background: #FAFAF8;
+            border-bottom: 1px solid #E8E5E0;
+        }
+
+        table.data-table thead th:not(:first-child) {
+            text-align: right;
+        }
+
+        table.data-table tbody td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #F3F1ED;
+            color: #4A4640;
+        }
+
+        table.data-table tbody td:not(:first-child) {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+        }
+
+        table.data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        table.data-table tbody tr:hover {
+            background: #FAFAF8;
+        }
+
+        table.data-table tfoot td {
+            padding: 14px 20px;
+            font-weight: 700;
+            color: #1A1816;
+            border-top: 2px solid #E8E5E0;
+            background: #FAFAF8;
+        }
+
+        table.data-table tfoot td:not(:first-child) {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+        }
+
+        .up {
+            color: #059669;
+        }
+
+        .down {
+            color: #DC2626;
+        }
+
+        .badge-sm {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: .02em;
+        }
+
+        .badge-green {
+            background: #ECFDF5;
+            color: #065F46;
+        }
+
+        .badge-red {
+            background: #FEF2F2;
+            color: #991B1B;
+        }
+
+        .badge-amber {
+            background: #FFF7ED;
+            color: #9A3412;
+        }
+
+        /* ═══════════════════════════════════════
+           METRIC CARDS (GRID)
+           ═══════════════════════════════════════ */
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .metric-card {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            padding: 24px;
+            transition: box-shadow .3s;
+        }
+
+        .metric-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+        }
+
+        .metric-card .mc-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #9B9590;
+            margin-bottom: 8px;
+        }
+
+        .metric-card .mc-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1A1816;
+            line-height: 1.2;
+        }
+
+        .metric-card .mc-change {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .metric-card .mc-note {
+            font-size: 12px;
+            color: #9B9590;
+            margin-top: 4px;
+        }
+
+        /* ═══════════════════════════════════════
+           PLATFORM BADGE
+           ═══════════════════════════════════════ */
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .03em;
+        }
+
+        .platform-badge svg {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+        }
+
+        .badge-google {
+            background: #E8F5E9;
+            color: #1B5E20;
+        }
+
+        .badge-ga {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+
+        .badge-gsc {
+            background: #E3F2FD;
+            color: #0D47A1;
+        }
+
+        .badge-pinterest {
+            background: #FCE4EC;
+            color: #B71C1C;
+        }
+
+        .badge-youtube {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+
+        .badge-facebook {
+            background: #E3F2FD;
+            color: #1565C0;
+        }
+
+        .badge-instagram {
+            background: linear-gradient(135deg, #FFF8E1, #FCE4EC, #EDE7F6);
+            color: #6A1B9A;
+        }
+
+        .badge-blog {
+            background: #F3E5F5;
+            color: #4A148C;
+        }
+
+        .badge-seo {
+            background: #E0F2F1;
+            color: #004D40;
+        }
+
+        .badge-ads {
+            background: #E3F2FD;
+            color: #1565C0;
+        }
+
+        /* ═══════════════════════════════════════
+           AD COPY CARDS
+           ═══════════════════════════════════════ */
+        .ad-product-group {
+            margin-bottom: 40px;
+        }
+
+        .ad-product-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1A1816;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #E8E5E0;
+        }
+
+        .ad-product-label span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            color: #8B7355;
+            margin-left: 12px;
+        }
+
+        .ad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .ad-card {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            padding: 24px;
+            transition: box-shadow .3s;
+        }
+
+        .ad-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+        }
+
+        .ad-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            gap: 8px;
+        }
+
+        .ad-card-header h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #9B9590;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .ad-card-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #1A1816;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .ad-card-body {
+            font-size: 13px;
+            color: #4A4640;
+            line-height: 1.7;
+            white-space: pre-line;
+            margin-bottom: 12px;
+        }
+
+        .ad-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1565C0;
+            background: #E3F2FD;
+            padding: 5px 14px;
+            border-radius: 6px;
+        }
+
+        .ad-card-targeting {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #F3F1ED;
+            font-size: 12px;
+            color: #9B9590;
+        }
+
+        .ad-card-targeting strong {
+            color: #6B665F;
+        }
+
+        /* ═══════════════════════════════════════
+           CONTENT REVIEW CARDS (COMPACT)
+           ═══════════════════════════════════════ */
+        .content-row {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 24px;
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: box-shadow .3s;
+        }
+
+        .content-row:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+        }
+
+        .content-row-img {
+            background: #F3F1ED;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            min-height: 120px;
+        }
+
+        .content-row-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-row-body {
+            padding: 20px 24px 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-row-body h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #1A1816;
+            margin-bottom: 4px;
+        }
+
+        .content-row-body p {
+            font-size: 13px;
+            color: #6B665F;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .content-row-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content-row-meta .crm-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .crm-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #B0AAA3;
+        }
+
+        .crm-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #2D2A26;
+        }
+
+        /* Status badges */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+
+        .status-ready {
+            background: #ECFDF5;
+            color: #065F46;
+        }
+
+        .status-ready::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #10B981;
+            border-radius: 50%;
+        }
+
+        .status-draft {
+            background: #FFF7ED;
+            color: #9A3412;
+        }
+
+        .status-draft::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #F59E0B;
+            border-radius: 50%;
+        }
+
+        /* ═══════════════════════════════════════
+           TOMORROW SECTION
+           ═══════════════════════════════════════ */
+        .priority-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .priority-list li {
+            background: #fff;
+            border: 1px solid #E8E5E0;
+            border-radius: 10px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: box-shadow .3s;
+        }
+
+        .priority-list li:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .04);
+        }
+
+        .priority-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #E8E5E0;
+            flex-shrink: 0;
+            width: 32px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .priority-text {
+            flex: 1;
+        }
+
+        .priority-text strong {
+            font-size: 15px;
+            color: #1A1816;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .priority-text span {
+            font-size: 13px;
+            color: #6B665F;
+        }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════ */
+        .doc-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-rule {
+            width: 64px;
+            height: 2px;
+            background: #E8E5E0;
+            margin: 0 auto 24px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #B0AAA3;
+        }
+
+        .footer-text strong {
+            color: #6B665F;
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════ */
+        @media (max-width: 900px) {
+            .cover-kpi-row {
+                gap: 16px;
+            }
+
+            .cover-kpi {
+                min-width: 140px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .section-number {
+                font-size: 40px;
+            }
+
+            .toc-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .content-row {
+                grid-template-columns: 1fr;
+            }
+
+            .content-row-body {
+                padding: 20px 24px;
+            }
+
+            table.data-table {
+                font-size: 13px;
+            }
+
+            table.data-table thead th,
+            table.data-table tbody td,
+            table.data-table tfoot td {
+                padding: 10px 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .masthead-inner {
+                padding: 0 20px;
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .masthead-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .cover,
+            .section {
+                padding: 40px 20px;
+            }
+
+            .cover-kpi-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════ MASTHEAD ═══════════════════════════════════════ -->
+    <header class="masthead">
+        <div class="masthead-inner">
+            <span class="masthead-brand">ReallyCheapFloors.com</span>
+            <div class="masthead-meta">
+                <span class="masthead-tag">WFH Daily Report</span>
+                <span class="masthead-date">FRI APR 24, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════ COVER ═══════════════════════════════════════ -->
+    <section class="cover wrap">
+        <div class="cover-overline">Daily Performance Report</div>
+        <h1>April 24 — Goals, Actions &amp; Results</h1>
+        <p class="cover-subtitle">
+            A complete view of today's marketing activity across paid, organic, social, and SEO channels — with
+            platform-level performance data and the content going live today.
+        </p>
+
+        <!-- HIGH-LEVEL KPIs -->
+        <div class="cover-kpi-row">
+            <div class="cover-kpi">
+                <div class="kpi-label">Google Ads Clicks</div>
+                <div class="kpi-value">143</div>
+                <div class="kpi-change kpi-neutral">$249.04 spend · $1.74 CPC</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="kpi-label">Website Active Users (28d)</div>
+                <div class="kpi-value">62K</div>
+                <div class="kpi-change kpi-up">↑ 23.4% vs prior period</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="kpi-label">YouTube Views (28d)</div>
+                <div class="kpi-value">53.4K</div>
+                <div class="kpi-change kpi-up">31.5K main + 21.9K clips</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="kpi-label">Pinterest Impressions (30d)</div>
+                <div class="kpi-value">20.3K</div>
+                <div class="kpi-change kpi-up">↑ 45% vs prior period</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ TOC ═══════════════════════════════════════ -->
+    <nav class="toc-bar">
+        <span class="toc-label">Jump To</span>
+        <div class="toc-links">
+            <a href="#snapshot" class="toc-link">Daily Snapshot</a>
+            <a href="#paid" class="toc-link">Paid Media</a>
+            <a href="#analytics" class="toc-link">Website Analytics</a>
+            <a href="#social" class="toc-link">Organic Social</a>
+            <a href="#seo" class="toc-link">SEO</a>
+            <a href="#content" class="toc-link">Content Published</a>
+            <a href="#adcopy" class="toc-link">Ad Copy</a>
+            <a href="#tomorrow" class="toc-link">Tomorrow</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ 01 · DAILY SNAPSHOT ═══════════════════════════════════════ -->
+    <section class="section" id="snapshot">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <div class="section-title-group">
+                <span class="section-platform">Executive Summary</span>
+                <h2 class="section-title">Daily Snapshot</h2>
+            </div>
+        </div>
+
+        <div class="snapshot">
+            <p>
+                Today's primary focus was <strong>content production, publishing, ad copywriting, email marketing, video
+                    creation, product photography, and website maintenance</strong> for the "Why Solid Hardwood Is a
+                Lifetime Investment" campaign. A new <strong>~2,400-word SEO blog article</strong> was written,
+                formatted, and <strong>published live</strong> on reallycheapfloors.com, along with <strong>4 social
+                    image assets</strong> (Instagram, Facebook, Pinterest, X) — all designed to drive organic traffic
+                around the hardwood flooring home-value narrative. Additionally, <strong>8 Facebook retargeting ad
+                    variations</strong> were written for two products: Duet "Rhett's Desire" engineered hardwood and
+                Johnson City "Rocky Fork" LVP — targeting general site visitors for re-engagement. A <strong>Builder A
+                    Grade email campaign</strong> was also written to re-engage past customers — featuring 6 hand-picked
+                products from our current inventory with pricing comparisons and grade education. A <strong>YouTube
+                    Short</strong> was created using AI video generation (Veo 3.1) — needs further polish tomorrow, but
+                was cross-posted to Pinterest and X today. <strong>Warehouse product photography</strong> was shot for
+                LVP inventory to support Craigslist listings. As part of ongoing <strong>website maintenance</strong>,
+                <strong>5 high-traffic blog posts</strong> were updated to replace out-of-stock product references with
+                current, high-inventory items. Google Ads continues to deliver strong performance with <strong>358
+                    clicks at $0.80 CPC</strong> and <strong>29 conversions</strong> yesterday. Pinterest is the
+                standout organic channel this month with impressions <strong>up 45%</strong> and engagements <strong>up
+                    43%</strong>. YouTube continues to generate views significantly above baseline — <strong>30.6K on
+                    the main channel</strong> (15.6K more than usual) and <strong>22K on the clips channel</strong>.
+                Website traffic remains strong with <strong>62K active users over 28 days</strong>, up 23.4% versus the
+                prior period, and <strong>35 users active right now</strong> at time of report.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 02 · PAID MEDIA ═══════════════════════════════════════ -->
+    <section class="section" id="paid">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <div class="section-title-group">
+                <span class="section-platform">Google Ads</span>
+                <h2 class="section-title">Paid Media Performance</h2>
+            </div>
+        </div>
+
+        <!-- Top-line -->
+        <div class="metric-grid">
+            <div class="metric-card">
+                <div class="mc-label">Total Impressions</div>
+                <div class="mc-value">1,376</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Total Clicks</div>
+                <div class="mc-value">143</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Interaction Rate</div>
+                <div class="mc-value">11.70%</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Total Spend</div>
+                <div class="mc-value">$249</div>
+                <div class="mc-note">CPC avg $1.74</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Conversions</div>
+                <div class="mc-value">18</div>
+                <div class="mc-note">Cost/conv $13.84</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Phone Calls</div>
+                <div class="mc-value">0</div>
+            </div>
+        </div>
+
+        <!-- Campaign Table -->
+        <div class="data-table-wrap">
+            <div class="data-table-header">
+                <h4>Campaign Breakdown</h4>
+                <span class="data-table-period">April 24, 2026 (single day)</span>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Type</th>
+                            <th>Impr.</th>
+                            <th>Clicks</th>
+                            <th>CTR</th>
+                            <th>Spend</th>
+                            <th>CPC</th>
+                            <th>Conv.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Eng Hardwood [PMAX]</strong></td>
+                            <td><span class="badge-sm badge-green">PMax</span></td>
+                            <td>631</td>
+                            <td>86</td>
+                            <td>16.48%</td>
+                            <td>$79.56</td>
+                            <td>$0.93</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Murphy Ads</strong></td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>243</td>
+                            <td>26</td>
+                            <td>10.70%</td>
+                            <td>$107.60</td>
+                            <td>$4.14</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Retargeting – Quotes/Forms</strong></td>
+                            <td><span class="badge-sm badge-red">Display</span></td>
+                            <td>140</td>
+                            <td>8</td>
+                            <td>5.71%</td>
+                            <td>$6.00</td>
+                            <td>$0.75</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wide Plank Hardwood [PMAX]</strong></td>
+                            <td><span class="badge-sm badge-green">PMax</span></td>
+                            <td>133</td>
+                            <td>4</td>
+                            <td>3.01%</td>
+                            <td>$0.14</td>
+                            <td>$0.04</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cheap Hardwood Flooring</strong></td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>21</td>
+                            <td>4</td>
+                            <td>19.05%</td>
+                            <td>$14.37</td>
+                            <td>$3.59</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solid Hardwood Flooring</strong></td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>54</td>
+                            <td>4</td>
+                            <td>7.41%</td>
+                            <td>$7.66</td>
+                            <td>$1.92</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Prefinished Solid Hardwood</strong></td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>24</td>
+                            <td>3</td>
+                            <td>12.50%</td>
+                            <td>$19.91</td>
+                            <td>$6.64</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hickory [PMAX]</strong></td>
+                            <td><span class="badge-sm badge-green">PMax</span></td>
+                            <td>41</td>
+                            <td>3</td>
+                            <td>7.32%</td>
+                            <td>$0.16</td>
+                            <td>$0.05</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hickory – 100 miles</strong></td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>82</td>
+                            <td>3</td>
+                            <td>3.66%</td>
+                            <td>$6.10</td>
+                            <td>$2.03</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Natural Red Oak Hardwood</td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>20.00%</td>
+                            <td>$4.66</td>
+                            <td>$4.66</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Prefinished Oak Flooring</td>
+                            <td><span class="badge-sm badge-amber">Search</span></td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>50.00%</td>
+                            <td>$2.89</td>
+                            <td>$2.89</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Account Total</strong></td>
+                            <td></td>
+                            <td>1,376</td>
+                            <td>143</td>
+                            <td>11.70%</td>
+                            <td>$249.04</td>
+                            <td>$1.74</td>
+                            <td>18</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- Channel Type Summary -->
+        <div class="data-table-wrap">
+            <div class="data-table-header">
+                <h4>Spend by Channel Type</h4>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Impr.</th>
+                        <th>Clicks</th>
+                        <th>Spend</th>
+                        <th>Conv.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Performance Max</strong></td>
+                        <td>805</td>
+                        <td>93</td>
+                        <td>$79.86</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Search</strong></td>
+                        <td>431</td>
+                        <td>42</td>
+                        <td>$163.18</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Display (Retargeting)</strong></td>
+                        <td>140</td>
+                        <td>8</td>
+                        <td>$6.00</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 03 · WEBSITE ANALYTICS ═══════════════════════════════════════ -->
+    <section class="section" id="analytics">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <div class="section-title-group">
+                <span class="section-platform">Google Analytics 4</span>
+                <h2 class="section-title">Website Traffic</h2>
+            </div>
+        </div>
+        <div style="margin-bottom: 24px; font-size: 13px; color: #9B9590; font-style: italic;">GA4 tracks what visitors
+            do <em>on our website</em> — how many came, what pages they viewed, and what actions they took.</div>
+
+        <div class="metric-grid">
+            <div class="metric-card">
+                <div class="mc-label">Active Users</div>
+                <div class="mc-value">62K</div>
+                <div class="mc-change down">↓ 1.8% vs prior</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">New Users</div>
+                <div class="mc-value">60K</div>
+                <div class="mc-change down">↓ 3.0% vs prior</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Key Events</div>
+                <div class="mc-value">1.2K</div>
+                <div class="mc-change down">↓ 9.5% vs prior</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Event Count</div>
+                <div class="mc-value">491K</div>
+                <div class="mc-change down">↓ 2.3% vs prior</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Active Users (28d Δ)</div>
+                <div class="mc-value">2,796</div>
+                <div class="mc-change up">↑ 23.4% Thu vs Thu</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Live Right Now</div>
+                <div class="mc-value">35</div>
+                <div class="mc-note">32 from United States</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 04 · ORGANIC SOCIAL ═══════════════════════════════════════ -->
+    <section class="section" id="social">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <div class="section-title-group">
+                <span class="section-platform">Pinterest · YouTube · Facebook · Instagram</span>
+                <h2 class="section-title">Organic Social Channels</h2>
+            </div>
+        </div>
+
+        <!-- PINTEREST -->
+        <div class="data-table-wrap" style="margin-bottom: 32px;">
+            <div class="data-table-header">
+                <h4>
+                    <span class="platform-badge badge-pinterest" style="margin-right: 8px;">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z" />
+                        </svg>
+                        Pinterest — Last 30 Days
+                    </span>
+                </h4>
+                <span class="data-table-period">Mar 25 – Apr 24, 2026</span>
+            </div>
+            <div class="metric-grid" style="padding: 20px 28px 4px;">
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Impressions</div>
+                    <div class="mc-value">20.3K</div>
+                    <div class="mc-change up">↑ 45%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Engagements</div>
+                    <div class="mc-value">1.49K</div>
+                    <div class="mc-change up">↑ 43%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Outbound Clicks</div>
+                    <div class="mc-value">259</div>
+                    <div class="mc-change up">↑ 32%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Saves</div>
+                    <div class="mc-value">127</div>
+                    <div class="mc-change up">↑ 35%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Total Audience</div>
+                    <div class="mc-value">15.5K</div>
+                    <div class="mc-change up">↑ 36%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Engaged Audience</div>
+                    <div class="mc-value">979</div>
+                    <div class="mc-change up">↑ 43%</div>
+                </div>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Top Boards</th>
+                        <th>Impr.</th>
+                        <th>Engage</th>
+                        <th>Pin Clicks</th>
+                        <th>Outbound</th>
+                        <th>Saves</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Flooring Tips</strong></td>
+                        <td>10,601</td>
+                        <td>893</td>
+                        <td>685</td>
+                        <td>130</td>
+                        <td>83</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flooring Ideas</strong></td>
+                        <td>3,961</td>
+                        <td>323</td>
+                        <td>234</td>
+                        <td>63</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Luxury Vinyl Flooring</strong></td>
+                        <td>1,586</td>
+                        <td>84</td>
+                        <td>63</td>
+                        <td>12</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Black Hardwood Floors</td>
+                        <td>519</td>
+                        <td>26</td>
+                        <td>14</td>
+                        <td>9</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="data-table-wrap" style="margin-bottom: 32px;">
+            <div class="data-table-header">
+                <h4>
+                    <span class="platform-badge badge-youtube" style="margin-right: 8px;">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        YouTube — Last 28 Days
+                    </span>
+                </h4>
+                <span class="data-table-period">Mar 27 – Apr 23, 2026</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Views</th>
+                        <th>Watch Time</th>
+                        <th>Subs Gained</th>
+                        <th>Total Subs</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ReallyCheapFloors.com</strong> (main)</td>
+                        <td><span class="up">31.5K ↑</span></td>
+                        <td>408.4 hrs</td>
+                        <td>+17</td>
+                        <td>—</td>
+                        <td>$64.54</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RCF Podcast Clips</strong> (2nd channel)</td>
+                        <td><span class="up">21.9K ↑</span></td>
+                        <td>352.8 hrs</td>
+                        <td>+7</td>
+                        <td>2,499</td>
+                        <td>$98.87</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Combined Total</strong></td>
+                        <td>53.4K</td>
+                        <td>761.2 hrs</td>
+                        <td>+24</td>
+                        <td>—</td>
+                        <td>$163.41</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div style="padding: 16px 28px; font-size: 13px; color: #6B665F;">
+                <strong style="color: #059669;">Main channel:</strong> 16.5K views more than usual &nbsp;·&nbsp;
+                <strong style="color: #059669;">Clips channel:</strong> 496 views more than usual &nbsp;·&nbsp;
+                Watch time up on both channels (main +38.4 hrs above usual)
+            </div>
+        </div>
+
+        <!-- FACEBOOK -->
+        <div class="data-table-wrap" style="margin-bottom: 32px;">
+            <div class="data-table-header">
+                <h4>
+                    <span class="platform-badge badge-facebook" style="margin-right: 8px;">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        Facebook Page — Last 28 Days
+                    </span>
+                </h4>
+                <span class="data-table-period">Mar 27 – Apr 23, 2026</span>
+            </div>
+            <div class="metric-grid" style="padding: 20px 28px 12px;">
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Page Views</div>
+                    <div class="mc-value">395K</div>
+                    <div class="mc-change down">↓ 24%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Engagement</div>
+                    <div class="mc-value">17.3K</div>
+                    <div class="mc-change down">↓ 12%</div>
+                </div>
+                <div class="metric-card" style="border: none; padding: 16px 0;">
+                    <div class="mc-label">Peak Day Views</div>
+                    <div class="mc-value">10,145</div>
+                    <div class="mc-note">April 16</div>
+                </div>
+            </div>
+            <div style="padding: 0 28px 20px; font-size: 13px; color: #6B665F;">
+                Views and engagement are down from the prior period. Continued content posting today (Instagram
+                cross-post) aimed at stabilizing engagement trends. Weekly progress: 3/15 new followers, 20/320 post
+                interactions toward goal.
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 05 · SEO ═══════════════════════════════════════ -->
+    <section class="section" id="seo">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <div class="section-title-group">
+                <span class="section-platform">Google Search Console — Last 7 Days</span>
+                <h2 class="section-title">SEO &amp; Search Performance</h2>
+            </div>
+        </div>
+        <div style="margin-bottom: 24px; font-size: 13px; color: #9B9590; font-style: italic;">Search Console tracks how
+            people find us <em>through Google Search</em> — what they searched, how often we appeared, and how many
+            clicked through to our site. Data below covers the <strong>7-day period ending April 24, 2026</strong>.</div>
+
+        <div class="metric-grid">
+            <div class="metric-card">
+                <div class="mc-label">Total Clicks (7d)</div>
+                <div class="mc-value">1.96K</div>
+                <div class="mc-change up">↑ &lt;1% vs prior period</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Total Impressions (7d)</div>
+                <div class="mc-value">431K</div>
+                <div class="mc-change down">↓ 12% vs prior period</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Image Search Clicks</div>
+                <div class="mc-value">226</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Discover Clicks</div>
+                <div class="mc-value">1</div>
+                <div class="mc-note">Google Discover feed</div>
+            </div>
+            <div class="metric-card">
+                <div class="mc-label">Branded vs Non-Branded</div>
+                <div class="mc-value">10 / 90%</div>
+                <div class="mc-note">90% non-branded traffic</div>
+            </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="data-table-wrap" style="margin-bottom: 24px;">
+            <div class="data-table-header">
+                <h4>Top Content by Clicks</h4>
+                <span class="data-table-period">7-day period ending Apr 24, 2026</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Clicks</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Homepage</strong> — reallycheapfloors.com</td>
+                        <td>291</td>
+                        <td><span class="up">↑ 7%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disadvantages of Vinyl Plank Flooring</strong> —
+                            /blog/disadvantages-of-vinyl-plank-flooring/</td>
+                        <td>70</td>
+                        <td><span class="up">↑ 204%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>23 Best Red Oak Floor Stain Colors</strong> —
+                            /blog/23-best-red-oak-floor-stain-colors/</td>
+                        <td>61</td>
+                        <td><span class="down">↓ 3%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Black Pet Stains on Hardwood</strong> —
+                            /blog/how-to-get-pee-stains-out-of-hardwood-floors/</td>
+                        <td>61</td>
+                        <td><span class="down">↓ 10%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>What Color Walls Go With Red Oak Floors</strong> —
+                            /blog/what-color-walls-go-with-red-oak-floors/</td>
+                        <td>55</td>
+                        <td><span class="up">↑ 25%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Top Queries -->
+        <div class="data-table-wrap">
+            <div class="data-table-header">
+                <h4>Top Search Queries</h4>
+                <span class="data-table-period">7-day period ending Apr 24, 2026</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Query</th>
+                        <th>Clicks</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>really cheap floors</strong></td>
+                        <td>173</td>
+                        <td><span class="up">↑ 5%</span></td>
+                    </tr>
+                    <tr>
+                        <td>cheap hardwood flooring</td>
+                        <td>33</td>
+                        <td><span class="up">↑ 57%</span></td>
+                    </tr>
+                    <tr>
+                        <td>cheap lvp flooring</td>
+                        <td>29</td>
+                        <td><span class="up">↑ 38%</span></td>
+                    </tr>
+                    <tr>
+                        <td>red oak stain</td>
+                        <td>20</td>
+                        <td><span class="down">↓ 23%</span></td>
+                    </tr>
+                    <tr>
+                        <td>thickness of lvp flooring in inches</td>
+                        <td>15</td>
+                        <td><span class="down">↓ 42%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 24px; font-size: 14px; color: #6B665F; line-height: 1.7;">
+            <strong style="color: #1A1816;">SEO Note:</strong> The "Disadvantages of Vinyl Plank Flooring" article
+            exploded to <strong style="color: #059669;">↑ 204%</strong> in clicks (up from 127% yesterday) — now the
+            #2 page on the site behind the homepage. This confirms the content update strategy is working.
+            "What Color Walls Go With Red Oak Floors" entered the top 5 for the first time at 55 clicks
+            (<strong style="color: #059669;">↑ 25%</strong>), showing growing interest in our design-focused content.
+            "Cheap hardwood flooring" queries surged <strong style="color: #059669;">↑ 57%</strong>
+            — strong signal for our core product category. Impressions are down 12% but clicks held steady, suggesting
+            improved click-through rates. Top countries: US 84%, Canada 4%, UK 2%, Australia 2%.
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 06 · CONTENT PUBLISHED ═══════════════════════════════════════ -->
+    <section class="section" id="content">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <div class="section-title-group">
+                <span class="section-platform">Content Created &amp; Published Today</span>
+                <h2 class="section-title">Today's Content Output</h2>
+            </div>
+        </div>
+
+        <!-- Blog -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="https://i.imgur.com/glbd3cS.jpg" alt="Blog featured image">
+            </div>
+            <div class="content-row-body">
+                <h4>Blog: Why Solid Hardwood Is a Lifetime Investment</h4>
+                <p>~2,400-word SEO article with featured mountain image, table of contents, key takeaways, FAQ schema,
+                    and pro tips. 8 H2 sections. <a
+                        href="https://www.reallycheapfloors.com/blog/why-solid-hardwood-is-a-lifetime-investment/"
+                        target="_blank" style="color: #8B7355; font-weight: 600; text-decoration: underline;">Read the
+                        published blog →</a></p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span class="crm-value">Blog</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Words</span><span class="crm-value">~2,400</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Format</span><span class="crm-value">16:9 hero</span>
+                    </div>
+                    <span class="status-badge status-ready">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram + Facebook -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="New%20Arrival%20Product%20Post%20for%20Social%20Media%20copy.jpg"
+                    alt="Landscape Traditions Great Harvest laminate new arrival post - $0.99/sq ft">
+            </div>
+            <div class="content-row-body">
+                <h4>Instagram + Facebook: New Arrival — Under $1/sq ft.</h4>
+                <p>Square branded image promoting Landscape Traditions "Great Harvest" premium embossed laminate at $0.99/sq ft. Features new arrival banner, kitchen lifestyle photo, and product specs. Cross-posted to Facebook business page.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platforms</span><span class="crm-value">IG + FB</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Format</span><span class="crm-value">1:1 Square</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Product</span><span class="crm-value">Great Harvest</span>
+                    </div>
+                    <span class="status-badge status-ready">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pinterest -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="New%20Arrival%20Product%20Post%20for%20Social%20Media%20copy.jpg"
+                    alt="Pinterest pin - Landscape Traditions Great Harvest laminate $0.99/sq ft">
+            </div>
+            <div class="content-row-body">
+                <h4>Pinterest: New Arrival — Premium Laminate, $0.99/sq ft</h4>
+                <p>Rich pin featuring Landscape Traditions "Great Harvest" with keyword-optimized description targeting laminate flooring, budget flooring, and wide plank searches. Pinned to "Flooring Tips" board.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span
+                            class="crm-value">Pinterest</span></div>
+                    <div class="crm-item"><span class="crm-label">Board</span><span class="crm-value">Flooring Tips</span></div>
+                    <div class="crm-item"><span class="crm-label">Format</span><span class="crm-value">1:1 Square</span></div>
+                    <span class="status-badge status-ready">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- X / Twitter -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="New%20Arrival%20Product%20Post%20for%20Social%20Media%20copy.jpg"
+                    alt="X/Twitter post - Landscape Traditions Great Harvest laminate new arrival">
+            </div>
+            <div class="content-row-body">
+                <h4>X (Twitter): New Arrival — $0.99/sq ft Laminate</h4>
+                <p>Concise product announcement with specs, price point, and CTA. Same new arrival image adapted for X's feed — punchy copy with 3 hashtags for discoverability.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span class="crm-value">X (Twitter)</span></div>
+                    <div class="crm-item"><span class="crm-label">Format</span><span class="crm-value">1:1 Square</span>
+                    </div>
+                    <span class="status-badge status-ready">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Campaign -->
+        <div class="content-row">
+            <div class="content-row-img"
+                style="background: linear-gradient(135deg, #2D2A26 0%, #8B7355 100%); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 48px;">📧</span>
+            </div>
+            <div class="content-row-body">
+                <h4>Email: Builder A Grade — Best Deals in Engineered Hardwood</h4>
+                <p>Customer re-engagement email featuring 6 hand-picked products from our Builder A inventory. Includes
+                    grade education, big-box comparison table, and take-all pricing. <a
+                        href="https://docs.google.com/document/d/1Joca2JNAr-gIhl8Rhgr6nXA5aJggsnE3I5TDaD12SF8/edit?usp=sharing"
+                        target="_blank" style="color: #8B7355; font-weight: 600; text-decoration: underline;">Read the
+                        full email →</a></p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span class="crm-value">Email</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Audience</span><span class="crm-value">Past
+                            Buyers</span></div>
+                    <div class="crm-item"><span class="crm-label">Products</span><span class="crm-value">6
+                            Featured</span></div>
+                    <span class="status-badge status-ready">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Product Updates -->
+        <div class="content-row">
+            <div class="content-row-img"
+                style="background: linear-gradient(135deg, #059669 0%, #0D9488 100%); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 48px;">🛠️</span>
+            </div>
+            <div class="content-row-body">
+                <h4>Website Maintenance: Blog Product Updates</h4>
+                <p>Updated 5 high-traffic blog posts to remove out-of-stock product references and replace them with
+                    current, high-inventory items. Keeps product links active, reduces dead-end clicks, and improves
+                    conversion potential on pages already generating organic traffic.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span class="crm-value">Blog /
+                            CMS</span></div>
+                    <div class="crm-item"><span class="crm-label">Pages Updated</span><span class="crm-value">5</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Type</span><span class="crm-value">Product Swap</span>
+                    </div>
+                    <span class="status-badge status-ready">Complete</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Laminate Width Selection Fix -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="showing-where-i-added-the-width-selection-option-for-our-new-laminate-products.png"
+                    alt="Laminate product listings showing the newly added Width attribute highlighted in red">
+            </div>
+            <div class="content-row-body">
+                <h4>Website Maintenance: Laminate Product Width Attribute</h4>
+                <p>Added the missing width selection option to our new laminate flooring products. The width attribute (8.03") was not displaying on the Valley Terrain and Landscape Traditions product listings — now corrected so customers can filter and compare products by plank width in the laminate category.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span class="crm-value">Magento /
+                            CMS</span></div>
+                    <div class="crm-item"><span class="crm-label">Products Fixed</span><span class="crm-value">2</span>
+                    </div>
+                    <div class="crm-item"><span class="crm-label">Type</span><span class="crm-value">Attribute Fix</span>
+                    </div>
+                    <span class="status-badge status-ready">Complete</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube Short -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="youtube-shorts-screenshot-april-23.png"
+                    alt="YouTube Short screenshot - AI-generated flooring showroom presenter">
+            </div>
+            <div class="content-row-body">
+                <h4>YouTube Short: Hardwood Home Value (AI Video)</h4>
+                <p>Short-form video created with Veo 3.1 — AI-generated presenter in flooring showroom discussing
+                    hardwood's impact on home equity. Originally cross-posted to Pinterest and X in draft state.
+                    Still needs re-editing for pacing and polish before uploading to YouTube Shorts — did not have time
+                    to work on this today. Carrying forward to tomorrow.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platforms</span><span class="crm-value">Pinterest +
+                            X</span></div>
+                    <div class="crm-item"><span class="crm-label">Format</span><span class="crm-value">9:16
+                            Vertical</span></div>
+                    <div class="crm-item"><span class="crm-label">Tool</span><span class="crm-value">Veo 3.1</span>
+                    </div>
+                    <span class="status-badge status-draft">Pending</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Craigslist Product Photo -->
+        <div class="content-row">
+            <div class="content-row-img">
+                <img src="lvp-warehouse-craigslist-photo.jpg"
+                    alt="LVP pallets in warehouse - Johnson City Rocky Fork for Craigslist">
+            </div>
+            <div class="content-row-body">
+                <h4>Craigslist: Warehouse Product Photography</h4>
+                <p>Photographed LVP inventory (Johnson City "Rocky Fork") on pallets in the warehouse for use in
+                    Craigslist listings. Shows real stock depth to build buyer confidence.</p>
+                <div class="content-row-meta">
+                    <div class="crm-item"><span class="crm-label">Platform</span><span
+                            class="crm-value">Craigslist</span></div>
+                    <div class="crm-item"><span class="crm-label">Type</span><span class="crm-value">Product
+                            Photo</span></div>
+                    <span class="status-badge status-ready">Complete</span>
+                </div>
+            </div>
+        </div>
+
+        <div
+            style="margin-top: 20px; padding: 20px 24px; background: #fff; border: 1px solid #E8E5E0; border-radius: 10px; font-size: 14px; color: #4A4640; line-height: 1.7;">
+            <strong style="color: #1A1816;">Today's Actions Summary:</strong>
+            1 blog article written &amp; formatted · 4 social images created · 1 YouTube Short created (needs polish) ·
+            1 warehouse product photo (Craigslist) · 4 platforms published to · 8 Facebook ad variations written across
+            2 products · 1 email campaign written (Builder A Grade, 6 featured products) · 5 blog posts updated (product
+            swaps) · All assets support the "Hardwood Home Value" campaign theme.
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 07 · FACEBOOK AD COPY ═══════════════════════════════════════ -->
+    <section class="section" id="adcopy">
+        <div class="section-header">
+            <span class="section-number">07</span>
+            <div class="section-title-group">
+                <span class="section-platform">Facebook Ads — Retargeting Campaign</span>
+                <h2 class="section-title">New Ad Copy Written Today</h2>
+            </div>
+        </div>
+
+        <div class="snapshot" style="margin-bottom: 32px;">
+            <p>
+                Wrote <strong>12 ad variations</strong> across <strong>4 products</strong> for Facebook retargeting.
+                These target general site visitors (last 30–180 days) who know the brand but may not have discovered
+                these specific products. Each variation takes a different angle — price, urgency, lifestyle, DIY, pets,
+                new arrival discovery, and expert-level spec education — to test what resonates with returning visitors.
+            </p>
+        </div>
+
+        <!-- PRODUCT 1: Rhett's Desire -->
+        <div class="ad-product-group">
+            <div class="ad-product-label">
+                Product 1: Duet "Rhett's Desire" <span>$2.79/sqft · 7.5" Eng. White Oak</span>
+            </div>
+            <div class="ad-grid">
+                <!-- Var 1 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 1 — Price Anchor</h5>
+                        <span class="badge-sm badge-green">Primary</span>
+                    </div>
+                    <div class="ad-card-headline">$2.79/sqft — White Oak Wide Plank. 1st Quality.</div>
+                    <div class="ad-card-body">Still shopping for floors? You need to see this one.
+
+                        Meet the Duet "Rhett's Desire" — 7.5" wide plank White Oak with a rich, dark wirebrushed finish
+                        at just $2.79/sq ft for 1st Quality.
+
+                        That's not a closeout. That's not 2nd quality. That's full 1st quality engineered hardwood at a
+                        price most stores can't touch.</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+                <!-- Var 2 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 2 — Value Discovery</h5>
+                    </div>
+                    <div class="ad-card-headline">20,000+ Sq Ft In Stock — $2.79 Wide Plank White Oak</div>
+                    <div class="ad-card-body">Looking for dark hardwood without the designer price tag?
+
+                        The Duet "Rhett's Desire" is a 7.5" wirebrushed White Oak in a dark, moody stain that transforms
+                        any room. Over 20,000 sq ft in stock at $2.79/sq ft.
+
+                        Most stores charge double for this look. We don't.</div>
+                    <div class="ad-card-cta">CTA: Learn More</div>
+                </div>
+                <!-- Var 3 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 3 — Lifestyle</h5>
+                    </div>
+                    <div class="ad-card-headline">Dark Wide Plank Hardwood — $2.79/sqft. Seriously.</div>
+                    <div class="ad-card-body">Some floors disappear into a room. This one defines it.
+
+                        7.5" wide plank engineered White Oak with a deep, dark wirebrushed finish and micro bevel edges.
+                        The kind of floor that makes a room feel finished the moment it goes down.
+
+                        Best Price Guarantee. $2.79/sqft.</div>
+                    <div class="ad-card-cta">CTA: Get Quote</div>
+                </div>
+                <!-- Var 4 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 4 — Stories/Reels</h5>
+                    </div>
+                    <div class="ad-card-headline">$2.79/sqft. 7.5" White Oak. Done.</div>
+                    <div class="ad-card-body">Duet "Rhett's Desire" — Dark wirebrushed wide plank engineered hardwood.
+
+                        1st Quality. $2.79/sq ft. Over 20,000 sq ft in stock.
+
+                        Free samples → reallycheapfloors.com
+                        Call → 1-800-253-2728</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2: Rocky Fork -->
+        <div class="ad-product-group">
+            <div class="ad-product-label">
+                Product 2: Johnson City "Rocky Fork" <span>$2.59/sqft · 9" LVP · DISCONTINUED</span>
+            </div>
+            <div class="ad-grid">
+                <!-- Var 5 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 5 — Scarcity</h5>
+                        <span class="badge-sm badge-red">Discontinued</span>
+                    </div>
+                    <div class="ad-card-headline">$2.59/sqft — Waterproof LVP. Discontinued. Limited Stock.</div>
+                    <div class="ad-card-body">Have you seen this one yet? It won't be around much longer.
+
+                        9" wide dark brown LVP with embossed-in-register texture. Waterproof. Pet friendly. Lifetime
+                        warranty.
+
+                        $2.59/sq ft. 1st Quality. Only 10,470 sq ft left — manufacturer discontinued it. Once gone, gone
+                        for good.</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+                <!-- Var 6 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 6 — Pet/Family</h5>
+                    </div>
+                    <div class="ad-card-headline">Waterproof. Pet Proof. $2.59/sqft.</div>
+                    <div class="ad-card-body">Need a floor that can handle real life? Kids. Dogs. Spills. All of it.
+
+                        20 mil waterproof LVP with lifetime warranty — only $2.59/sq ft. Embossed-in-register texture
+                        gives the look of real hardwood without the worry.
+
+                        Floating install. No glue. Click and go.</div>
+                    <div class="ad-card-cta">CTA: Learn More</div>
+                </div>
+                <!-- Var 7 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 7 — DIY Install</h5>
+                    </div>
+                    <div class="ad-card-headline">Click-Lock Vinyl Plank. No Glue. $2.59/sqft.</div>
+                    <div class="ad-card-body">Planning a DIY floor project? Check this out before you buy anything else.
+
+                        Floating install — click planks together, no glue, no nails. IXPE underlayment already attached.
+                        9" wide × 48" long planks cover ground fast.
+
+                        $2.59/sq ft for 1st Quality. Discontinued — 10,470 sq ft left.</div>
+                    <div class="ad-card-cta">CTA: Get Quote</div>
+                </div>
+                <!-- Var 8 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 8 — Stories/Reels</h5>
+                    </div>
+                    <div class="ad-card-headline">$2.59. Waterproof. Discontinued. Go.</div>
+                    <div class="ad-card-body">New find on our site → Johnson City "Rocky Fork" — 9" wide dark brown LVP.
+
+                        20 mil wear layer. Lifetime warranty. Attached pad. Click-lock install.
+
+                        $2.59/sq ft. 10,470 sq ft remaining.
+                        Discontinued — once it's gone, it's gone.</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3: Landscape Traditions Great Harvest -->
+        <div class="ad-product-group">
+            <div class="ad-product-label">
+                Product 3: Landscape Traditions "Great Harvest" <span>$0.99/sqft · 8.03" Premium Embossed Laminate</span>
+            </div>
+            <div class="ad-grid">
+                <!-- Var 9 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 9 — New Arrival Discovery</h5>
+                        <span class="badge-sm badge-green">Primary</span>
+                    </div>
+                    <div class="ad-card-headline">New Arrival — Premium Laminate. $0.99/sq ft. 1st Quality.</div>
+                    <div class="ad-card-body">Have you seen what just hit our warehouse?
+
+The Landscape Traditions "Great Harvest" is a premium embossed laminate with 8.03" wide planks — and it's only $0.99 per square foot. 1st Quality.
+
+That's not a typo. Under a dollar a square foot for a floor that looks this good.
+
+✅ Premium Embossed Texture — looks and feels like real wood
+✅ 8.03" Wide Planks — fewer seams, cleaner look
+✅ 1st Quality — no seconds, no factory rejects
+✅ Ships nationwide or pick up in Murphy, NC</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+                <!-- Var 10 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 10 — Price Disbelief</h5>
+                    </div>
+                    <div class="ad-card-headline">Under $1/sq ft — 8" Wide Plank Laminate. Premium Quality.</div>
+                    <div class="ad-card-body">We know what you're thinking.
+
+$0.99 per square foot? For 1st Quality? With 8-inch wide planks?
+
+Yes. All of it.
+
+The Landscape Traditions "Great Harvest" just arrived — premium embossed laminate with a warm, natural wood-grain look that makes the whole room feel like a custom build.
+
+At this price, you could floor an entire 500 sq ft room for under $500 in materials.
+
+📦 Free samples — see it in person before you commit
+📞 1-800-253-2728 — real people, no automated menus
+🔒 Best Price Guarantee — always</div>
+                    <div class="ad-card-cta">CTA: Learn More</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4: Back Home Warmth of Home -->
+        <div class="ad-product-group">
+            <div class="ad-product-label">
+                Product 4: Back Home "Warmth of Home" <span>$1.49/sqft · 12mm · 8" Laminate</span>
+            </div>
+            <div class="ad-grid">
+                <!-- Var 11 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 11 — 12mm Expert Value</h5>
+                        <span class="badge-sm badge-green">Primary</span>
+                    </div>
+                    <div class="ad-card-headline">$1.49/sqft — 12mm Laminate. 8" Wide Plank. 1st Quality.</div>
+                    <div class="ad-card-body">This is a floor that punches way above its price.
+
+The Back Home "Warmth of Home" is a 12mm thick laminate with 8-inch wide planks — and it's only $1.49 per square foot.
+
+Most laminate at big-box stores is 7mm–8mm thick. At 12mm, this floor feels completely different underfoot — solid, quiet, no hollow echo. It's the thickest laminate on the market.
+
+✅ 12mm overall thickness — the thickest laminate available
+✅ 8" wide planks — modern, high-end look
+✅ Locking install — click together, no glue, no nails
+✅ 1st Quality — warm natural oak tone
+
+Comparable floors at Lowe's and Home Depot start at $2.99–$4.49/sq ft. We're at $1.49.</div>
+                    <div class="ad-card-cta">CTA: Shop Now</div>
+                </div>
+                <!-- Var 12 -->
+                <div class="ad-card">
+                    <div class="ad-card-header">
+                        <h5>Variation 12 — DIY Weekend Project</h5>
+                    </div>
+                    <div class="ad-card-headline">Floor Your Kitchen This Weekend — $1.49/sqft. No Contractor Needed.</div>
+                    <div class="ad-card-body">Planning a floor upgrade? This is the one.
+
+12mm thick locking laminate that clicks together right over your existing subfloor. No glue. No nails. No contractor.
+
+8-inch wide planks cover ground fast. 1,700+ sq ft in stock right now.
+
+Do the math: a 300 sq ft kitchen costs $447 in materials. A 500 sq ft living area? $745. Try getting that quote from a flooring store.
+
+🔧 Locking install — beginner friendly, one weekend
+📐 8" planks — wider means fewer seams
+🏠 12mm thick — solid feel, no hollow sound
+🆓 Free samples — try it in your space first</div>
+                    <div class="ad-card-cta">CTA: Learn More</div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            style="padding: 20px 24px; background: #fff; border: 1px solid #E8E5E0; border-radius: 10px; font-size: 14px; color: #4A4640; line-height: 1.7;">
+            <strong style="color: #1A1816;">Targeting:</strong> General site retargeting — all reallycheapfloors.com
+            visitors (last 30–180 days). These users know the brand but may not have seen these specific products.
+            Placements: Facebook Feed, Instagram Feed, Stories. Exclude existing customers. The laminate ads lead with
+            product discovery and expert-level spec education — 12mm thickness and big-box price comparisons position
+            RCF as the knowledgeable, direct-from-warehouse alternative.
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ 08 · TOMORROW ═══════════════════════════════════════ -->
+    <section class="section" id="tomorrow">
+        <div class="section-header">
+            <span class="section-number">08</span>
+            <div class="section-title-group">
+                <span class="section-platform">Forward Planning</span>
+                <h2 class="section-title">Tomorrow's Priorities</h2>
+            </div>
+        </div>
+
+        <ul class="priority-list">
+            <li>
+                <span class="priority-num">1</span>
+                <div class="priority-text">
+                    <strong>Repeat today's content production cycle with fresh content</strong>
+                    <span>Tomorrow follows the same daily output framework: new blog article (different topic), new
+                        social image set for IG/FB/Pinterest/X, new email or ad copy as needed, and continued blog
+                        maintenance. Different content each day, same production volume.</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">2</span>
+                <div class="priority-text">
+                    <strong>Re-edit and re-upload YouTube Short</strong>
+                    <span>Today's Veo 3.1 short didn't meet quality standards. Will re-edit with improved transitions
+                        and pacing, then upload to YouTube Shorts and re-post to Pinterest and X.</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">3</span>
+                <div class="priority-text">
+                    <strong>Monitor Google Ads campaign performance</strong>
+                    <span>Review PMAX conversion data, check for enhanced conversions setup issues flagged on Murphy Ads
+                        and Eng Hardwood campaigns. Adjust bidding if needed.</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">4</span>
+                <div class="priority-text">
+                    <strong>Address Facebook engagement decline</strong>
+                    <span>Views down 24% and engagement down 12% over 28 days. Plan next week's Facebook content
+                        calendar to reverse this trend — prioritize video and carousel formats.</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">5</span>
+                <div class="priority-text">
+                    <strong>Continue Pinterest momentum</strong>
+                    <span>All metrics trending up 30–45%. Schedule next batch of pins to capitalize on the current
+                        growth. Focus on "Flooring Tips" board (10.6K impressions, top performer).</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">6</span>
+                <div class="priority-text">
+                    <strong>SEO content planning</strong>
+                    <span>The "Disadvantages of Vinyl Plank" article is up 127% in clicks — explore related long-tail
+                        content opportunities. Begin research for next blog article topic.</span>
+                </div>
+            </li>
+            <li>
+                <span class="priority-num">7</span>
+                <div class="priority-text">
+                    <strong>YouTube content review</strong>
+                    <span>Both channels performing above baseline. Review top-performing clips (1,183 views on top video
+                        in 48hrs) and identify repurposing opportunities for social.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════════════════════════════ REPORT NAV ═══════════════════════════════════════ -->
+    <nav style="max-width: 1200px; margin: 0 auto; padding: 32px 40px 0; border-top: 1px solid #E8E5E0;">
+        <p
+            style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9B9590; margin-bottom: 16px;">
+            Published Reports</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="/rcf-reports/april-23-daily-report.html"
+                style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8B7355; text-decoration: none; padding: 6px 16px; border: 1px solid #E8E5E0; border-radius: 6px; transition: all .2s;">Apr
+                23 — Daily Report</a>
+            <a href="/rcf-reports/april-23-content-review.html"
+                style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8B7355; text-decoration: none; padding: 6px 16px; border: 1px solid #E8E5E0; border-radius: 6px; transition: all .2s;">Apr
+                23 — Content Review</a>
+            <a href="/rcf-reports/april-23-blog-solid-hardwood-home-value-investment.html"
+                style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8B7355; text-decoration: none; padding: 6px 16px; border: 1px solid #E8E5E0; border-radius: 6px; transition: all .2s;">Apr
+                23 — Blog Article</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+    <footer class="doc-footer">
+        <div class="footer-rule"></div>
+        <p class="footer-text">
+            <strong>ReallyCheapFloors.com</strong> — WFH Daily Report &nbsp;·&nbsp; April 23, 2026 &nbsp;·&nbsp;
+            Prepared for Terry Moore
+        </p>
+    </footer>
+
+</body>
+
+</html>
