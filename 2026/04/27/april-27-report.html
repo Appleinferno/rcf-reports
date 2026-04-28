@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>April 27 Report</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: #f5f5f0;
@@ -13,22 +19,30 @@
             line-height: 1.6;
             padding: 40px 20px;
         }
+
         .container {
             max-width: 860px;
             margin: 0 auto;
         }
+
         h1 {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 4px;
             color: #1a1a1a;
         }
+
         .meta {
             font-size: 14px;
             color: #777;
             margin-bottom: 32px;
         }
-        .meta span { font-weight: 600; color: #555; }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
         .summary {
             background: #fff;
             border-left: 4px solid #b5451b;
@@ -37,6 +51,7 @@
             margin-bottom: 36px;
             font-size: 15px;
         }
+
         h2 {
             font-size: 20px;
             font-weight: 700;
@@ -45,20 +60,32 @@
             padding-bottom: 6px;
             border-bottom: 2px solid #e0ddd6;
         }
+
         h3 {
             font-size: 16px;
             font-weight: 600;
             color: #333;
             margin: 20px 0 8px;
         }
-        p, li { font-size: 15px; margin-bottom: 8px; }
-        ul { padding-left: 20px; margin-bottom: 12px; }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 12px 0 20px;
             font-size: 14px;
         }
+
         th {
             text-align: left;
             background: #eae8e2;
@@ -66,18 +93,24 @@
             font-weight: 600;
             color: #333;
         }
+
         td {
             padding: 8px 12px;
             border-bottom: 1px solid #e8e6e0;
         }
-        tr:last-child td { border-bottom: none; }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         .card {
             background: #fff;
             border-radius: 8px;
             padding: 20px 24px;
             margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
         }
+
         .badge {
             display: inline-block;
             background: #b5451b;
@@ -90,9 +123,19 @@
             letter-spacing: 0.5px;
             margin-right: 6px;
         }
-        .badge.green { background: #2e7d32; }
-        .badge.blue { background: #1565c0; }
-        .badge.purple { background: #6a1b9a; }
+
+        .badge.green {
+            background: #2e7d32;
+        }
+
+        .badge.blue {
+            background: #1565c0;
+        }
+
+        .badge.purple {
+            background: #6a1b9a;
+        }
+
         img.report-img {
             width: 100%;
             max-width: 520px;
@@ -100,15 +143,29 @@
             margin: 12px 0;
             display: block;
         }
-        a { color: #b5451b; text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
-        .status { color: #2e7d32; font-weight: 600; }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .status {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
         .platform-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 8px;
             margin: 12px 0;
         }
+
         .platform-chip {
             background: #fff;
             border: 1px solid #e0ddd6;
@@ -117,18 +174,31 @@
             font-size: 14px;
             text-align: center;
         }
-        .platform-chip .check { color: #2e7d32; font-weight: 700; margin-right: 4px; }
-        hr { border: none; border-top: 1px solid #e0ddd6; margin: 32px 0; }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
 
         <h1>Daily Report — April 27, 2026</h1>
-        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart</p>
+        <p class="meta"><span>For:</span> Terry Moore &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart</p>
 
         <div class="summary">
-            Eight deliverables completed: one new blog post, two blog updates with shoppable product cards, two Facebook ad creatives, one AI-generated video ad, one social media post shared across four platforms, and one new SOP document for AI-powered ad generation.
+            Eight deliverables completed: one new blog post, two blog updates with shoppable product cards, two Facebook
+            ad creatives, one AI-generated video ad, one social media post shared across four platforms, and one new SOP
+            document for AI-powered ad generation.
         </div>
 
         <!-- 1. NEW BLOG -->
@@ -136,15 +206,39 @@
         <div class="card">
             <span class="badge">Blog</span>
             <h3>The 'Dark Academia' Walnut Revival 2026</h3>
-            <p>A trend-driven article tying the resurgence of darker chocolate-brown walnut tones in interior design back to RCF's affordable product catalog. References the 1st Dibs designer survey and positions three RCF products across different price points.</p>
+            <p>A trend-driven article tying the resurgence of darker chocolate-brown walnut tones in interior design
+                back to RCF's affordable product catalog. References the 1st Dibs designer survey and positions three
+                RCF products across different price points.</p>
             <p><strong>File:</strong> <code>new-blog.html</code></p>
 
             <table>
-                <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Grade</th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <tr><td>Hickory Lakes Charmed</td><td>Prefinished Solid Hardwood</td><td>$3.19 /sq ft</td><td>Builder</td></tr>
-                    <tr><td>Valley Terrain — Landscape Contours</td><td>Laminate</td><td>$1.79 /sq ft</td><td>1st Quality</td></tr>
-                    <tr><td>Landscape Traditions — Great Harvest</td><td>Laminate</td><td>$0.99 /sq ft</td><td>1st Quality</td></tr>
+                    <tr>
+                        <td>Hickory Lakes Charmed</td>
+                        <td>Prefinished Solid Hardwood</td>
+                        <td>$3.19 /sq ft</td>
+                        <td>Builder</td>
+                    </tr>
+                    <tr>
+                        <td>Valley Terrain — Landscape Contours</td>
+                        <td>Laminate</td>
+                        <td>$1.79 /sq ft</td>
+                        <td>1st Quality</td>
+                    </tr>
+                    <tr>
+                        <td>Landscape Traditions — Great Harvest</td>
+                        <td>Laminate</td>
+                        <td>$0.99 /sq ft</td>
+                        <td>1st Quality</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -155,9 +249,12 @@
         <h2>2. Blog Updates — Product-to-Use HTML Cards</h2>
         <div class="card">
             <span class="badge blue">Update</span>
-            <p>Two existing blog posts were updated with shoppable HTML product cards. Each card includes a product image, name, specs, pricing, and a "Shop Now" CTA linking directly to the product page on ReallyCheapFloors.com.</p>
+            <p>Two existing blog posts were updated with shoppable HTML product cards. Each card includes a product
+                image, name, specs, pricing, and a "Shop Now" CTA linking directly to the product page on
+                ReallyCheapFloors.com.</p>
             <h3>Blog 1 — Dark Academia</h3>
-            <p>Hickory Lakes Charmed product card integrated, replacing a generic placeholder image with a high-intent, shoppable component.</p>
+            <p>Hickory Lakes Charmed product card integrated, replacing a generic placeholder image with a high-intent,
+                shoppable component.</p>
             <h3>Blog 2 — Second blog update</h3>
             <p>Updated using the same product card format with relevant product selections.</p>
         </div>
@@ -180,9 +277,11 @@
             <ul>
                 <li><strong>Image:</strong> <code>duet og room scene from nfm website for duet.jpg</code></li>
                 <li><strong>Product:</strong> Duet collection</li>
-                <li><strong>Visual:</strong> Contemporary dining room with dark-toned hardwood, modern furniture, floor-to-ceiling windows.</li>
+                <li><strong>Visual:</strong> Contemporary dining room with dark-toned hardwood, modern furniture,
+                    floor-to-ceiling windows.</li>
             </ul>
-            <img class="report-img" src="duet og room scene from nfm website for duet.jpg" alt="Duet collection room scene">
+            <img class="report-img" src="duet og room scene from nfm website for duet.jpg"
+                alt="Duet collection room scene">
         </div>
 
         <hr>
@@ -191,7 +290,9 @@
         <h2>4. AI-Generated Video Ad (Draft)</h2>
         <div class="card">
             <span class="badge purple">Video</span>
-            <p>Created a new video ad using AI video generation. Features a construction/renovation scene with two contractors reviewing flooring materials on a job site — targeting homeowners and builders mid-project who are actively sourcing flooring.</p>
+            <p>Created a new video ad using AI video generation. Features a construction/renovation scene with two
+                contractors reviewing flooring materials on a job site — targeting homeowners and builders mid-project
+                who are actively sourcing flooring.</p>
             <img class="report-img" src="video thumb.png" alt="AI-generated video ad thumbnail">
             <p><a href="https://youtu.be/5Du_f6OwWik" target="_blank">▶ Watch the draft video on YouTube →</a></p>
             <ul>
@@ -206,8 +307,10 @@
         <h2>5. Social Media Posts</h2>
         <div class="card">
             <span class="badge green">Social</span>
-            <p>A branded social media graphic was created to promote the new <em>Dark Academia Walnut Revival 2026</em> blog post. The same image template was shared across four platforms.</p>
-            <img class="report-img" src="new pinterest post image to promote the new blog.jpg" alt="Social media post promoting the Dark Academia blog" style="max-width:400px;">
+            <p>A branded social media graphic was created to promote the new <em>Dark Academia Walnut Revival 2026</em>
+                blog post. The same image template was shared across four platforms.</p>
+            <img class="report-img" src="new pinterest post image to promote the new blog.jpg"
+                alt="Social media post promoting the Dark Academia blog" style="max-width:400px;">
             <div class="platform-grid">
                 <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
                 <div class="platform-chip"><span class="check">✓</span> X (Twitter)</div>
@@ -222,8 +325,12 @@
         <h2>6. New SOP Created — AI Ad Generation Workflow</h2>
         <div class="card">
             <span class="badge" style="background:#555;">SOP</span>
-            <p>Created a new Standard Operating Procedure for Paden that documents the step-by-step workflow for generating social media ads using Google Gemini. The SOP covers importing product images and copy from the website, applying a standardized AI prompt, and producing high-converting ad content that highlights key flooring specs and our $250 delivery CTA.</p>
-            <p><a href="https://docs.google.com/document/d/1-oFDxc6saBHBbcx3gcAUF9hSpNzBcnKgjDpxrprxq8E/edit?usp=sharing" target="_blank">📄 View the SOP in Google Docs →</a></p>
+            <p>Created a new Standard Operating Procedure for Paden that documents the step-by-step workflow for
+                generating social media ads using Google Gemini. The SOP covers importing product images and copy from
+                the website, applying a standardized AI prompt, and producing high-converting ad content that highlights
+                key flooring specs and our $250 delivery CTA.</p>
+            <p><a href="https://docs.google.com/document/d/1-oFDxc6saBHBbcx3gcAUF9hSpNzBcnKgjDpxrprxq8E/edit?usp=sharing"
+                    target="_blank">📄 View the SOP in Google Docs →</a></p>
             <h3>Workflow Overview</h3>
             <ul>
                 <li><strong>Step 1:</strong> Import the product image from the website into Gemini</li>
@@ -234,4 +341,5 @@
 
     </div>
 </body>
+
 </html>
