@@ -8,3 +8,5 @@
 # OS files
 Thumbs.db
 .DS_Store
+# Video files
+*.mp4
