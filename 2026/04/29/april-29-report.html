@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April 29 Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .shorts-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            margin: 16px 0;
+            align-items: start;
+        }
+
+        @media (max-width: 640px) {
+            .shorts-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .shorts-embed {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
+        .shorts-embed iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            border: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #2e7d32;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .traffic-bar-wrap {
+            margin-top: 6px;
+        }
+
+        .traffic-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .traffic-row .label {
+            width: 140px;
+            color: #555;
+            flex-shrink: 0;
+        }
+
+        .traffic-row .bar-bg {
+            flex: 1;
+            height: 8px;
+            background: #e0ddd6;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .traffic-row .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: #b5451b;
+        }
+
+        .traffic-row .pct {
+            width: 48px;
+            text-align: right;
+            font-weight: 600;
+            color: #333;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — April 29, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+            <strong>Six deliverables completed today:</strong>
+            <ul style="margin-top: 8px; margin-bottom: 0;">
+                <li>Published a new blog post — <em>What Is Hybrid Resilient Flooring?</em> — with a custom featured image</li>
+                <li>Created a before-and-after image of the Country Low Gloss Hickory product for social media (assigned to Paden)</li>
+                <li>Edited and posted the Spec Home Builder video ad to YouTube and Facebook with a custom thumbnail</li>
+                <li>Posted a YouTube Short from the Spec Home Builder content — views tracking 88% above average</li>
+                <li>Designed and shared a promotional graphic across Facebook, X, Instagram, and Pinterest to drive blog traffic</li>
+                <li>Reorganized the Distressed Hardwood shop page — moved top products up, pushed American Scrape to the bottom</li>
+            </ul>
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>What Is Hybrid Resilient Flooring?</h3>
+            <p>A new educational blog post covering hybrid resilient composite (HRC) flooring — what it is, its key
+                benefits including scratch resistance, PVC-free wood-resin core construction, and easy click-lock
+                installation. The post positions RCF as an authority on emerging 2026 flooring trends and helps
+                customers understand this low-maintenance flooring alternative.</p>
+
+            <h3>Featured Image</h3>
+            <img class="report-img" src="posted featured image of What is Hybrid Resistant Flooring HRC.jpg"
+                alt="Featured image for the What Is Hybrid Resilient Flooring blog post" style="max-width:600px;">
+        </div>
+
+        <hr>
+
+        <!-- 2. HICKORY LAKES BEFORE & AFTER -->
+        <h2>2. Country Low Gloss Hickory 5" BL — Before &amp; After Image</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+            <p>A before-and-after comparison image of the Country Low Gloss Hickory product was prepared for use in
+                social media posts. Paden was instructed to create the graphic, which highlights the transformation and
+                visual appeal of the product for prospective buyers.</p>
+
+            <div class="img-row">
+                <div>
+                    <img src="country low gloss before picture.webp"
+                        alt="Hickory Lakes — before: raw plank close-up showing natural grain and color variation">
+                    <p class="img-caption">Before</p>
+                </div>
+                <div>
+                    <img src="country hickory natural post.jpg"
+                        alt="Hickory Lakes — after: Country Hickory Natural social media post">
+                    <p class="img-caption">After</p>
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>Product:</strong> Hickory Lakes</li>
+                <li><strong>Purpose:</strong> Social media content</li>
+                <li><strong>Assigned to:</strong> Paden</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- 3. SPEC BUILDER VIDEO AD -->
+        <h2>3. Spec Home Builder Video Ad — Edited &amp; Posted</h2>
+        <div class="card">
+            <span class="badge video">Video</span>
+            <p>The Spec Home Builder video ad was finalized, edited, and posted to both YouTube and Facebook. The ad
+                targets builders and project managers, highlighting how RCF offers 1st quality hardwood at roughly 40%
+                less than big box store laminate and LVP alternatives.</p>
+
+            <h3>YouTube Thumbnail</h3>
+            <p>A custom thumbnail was designed for the video, featuring a side-by-side comparison of big box store
+                laminate/LVP (crossed out at $6.00/sq.ft.) versus 1st quality walnut hardwood from RCF at $3.60/sq.ft. —
+                reinforcing the value proposition.</p>
+            <img class="report-img" src="simple benefit yt thumbnail.jpg"
+                alt="YouTube thumbnail for the Spec Home Builder ad"
+                style="max-width:600px;">
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> YouTube</div>
+                <div class="platform-chip"><span class="check">✓</span> Facebook</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 4. YOUTUBE SHORTS -->
+        <h2>4. YouTube Short — Spec Home Builder</h2>
+        <div class="card">
+            <span class="badge shorts">YouTube Shorts</span>
+            <p>A 14-second YouTube Short was created from the Spec Home Builder video content and posted to the channel.
+                Early performance is strong — views are tracking 88% higher than other Shorts on the channel, with the
+                Shorts feed driving the majority of traffic.</p>
+
+            <div class="shorts-layout">
+                <div class="shorts-embed">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mz0dIQ4InzE?si=77YKHHN9iaWQ5j4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <div class="callout">📈 Views are 88% higher than your other Shorts</div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value highlight">433</div>
+                            <div class="stat-label">Views</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">0.8 hrs</div>
+                            <div class="stat-label">Watch Time</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">0:14</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">48 hrs</div>
+                            <div class="stat-label">Since Posted</div>
+                        </div>
+                        <div class="stat-card full-width" style="text-align:left;">
+                            <div class="stat-label" style="margin-bottom:8px; font-size:13px;">Traffic Sources</div>
+                            <div class="traffic-bar-wrap">
+                                <div class="traffic-row">
+                                    <span class="label">Shorts feed</span>
+                                    <div class="bar-bg">
+                                        <div class="bar-fill" style="width:96.5%;"></div>
+                                    </div>
+                                    <span class="pct">96.5%</span>
+                                </div>
+                                <div class="traffic-row">
+                                    <span class="label">Other YT features</span>
+                                    <div class="bar-bg">
+                                        <div class="bar-fill" style="width:2.5%;"></div>
+                                    </div>
+                                    <span class="pct">2.5%</span>
+                                </div>
+                                <div class="traffic-row">
+                                    <span class="label">YouTube search</span>
+                                    <div class="bar-bg">
+                                        <div class="bar-fill" style="width:0.9%;"></div>
+                                    </div>
+                                    <span class="pct">0.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p><a href="https://youtube.com/shorts/Mz0dIQ4InzE" target="_blank">Watch on YouTube →</a></p>
+        </div>
+
+        <hr>
+
+        <!-- 5. SOCIAL MEDIA PROMOTION -->
+        <h2>5. Social Media Promotion — New Blog Post</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <p>A dedicated promotional graphic was created and posted across all social media platforms to drive traffic
+                to the new hybrid resilient flooring blog post. The image highlights the 2026 low-maintenance flooring
+                trend, calling out key HRC benefits — scratch resistance, PVC-free wood-resin core, and easy-click
+                installation — with a clear call-to-action to read the full blog.</p>
+            <img class="report-img" src="all other socials image to promote the new blog.jpg"
+                alt="Social media promotional graphic for the hybrid resilient flooring blog post"
+                style="max-width:600px;">
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Facebook</div>
+                <div class="platform-chip"><span class="check">✓</span> X (Twitter)</div>
+                <div class="platform-chip"><span class="check">✓</span> Instagram</div>
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 6. WEBSITE MAINTENANCE -->
+        <h2>6. Website Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+            <h3>Distressed Hardwood Shop Page — Product Reordering</h3>
+            <p>Reorganized the product display order on the Distressed Hardwood Flooring shop page. Higher-quality,
+                better-selling products — including Pub Scrape, Hickory Lakes, Canyon Elements, American Home, Rustic
+                Plank, and Palmetto Road — were moved to the top of the page to improve visibility and conversion. The
+                American Scrape (Antique S) products were pushed to the bottom of the listing.</p>
+            <img class="report-img" src="updated the distressed hardwood flooring shop page.png"
+                alt="Updated Distressed Hardwood Flooring shop page with reorganized product order"
+                style="max-width:700px;">
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
