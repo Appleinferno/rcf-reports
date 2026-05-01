@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April 30 Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .shorts-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            margin: 16px 0;
+            align-items: start;
+        }
+
+        @media (max-width: 640px) {
+            .shorts-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .shorts-embed {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
+        .shorts-embed iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            border: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.draft {
+            background: #fff3e0;
+            border-color: #ffe0b2;
+            color: #e65100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — April 30, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+            <strong>Nine deliverables completed today:</strong>
+            <ul style="margin-top: 8px; margin-bottom: 0;">
+                <li>Published a new blog post — <em>The 5-Step Process to HELOC-Funded Inventory Hedging</em> — with a custom featured image</li>
+                <li>Designed and shared a promotional graphic across Facebook, X, Instagram, and Pinterest to drive blog traffic</li>
+                <li>Created and launched Facebook ads promoting free flooring samples</li>
+                <li>Drafted a new YouTube Short (rough cut ready for review)</li>
+                <li>Compiled SEO Analytics from Google Search Console — 1.96K clicks over the last 7 days</li>
+                <li>Pulled Pinterest Analytics — 4.25K impressions, 68 outbound clicks, 31 saves</li>
+                <li>Pulled X (Twitter) Analytics — 214 impressions (↑94%), 16.3% engagement rate (↑124%)</li>
+                <li>Pulled YouTube Analytics — 9.8K combined views across two channels, $34.11 total revenue</li>
+                <li>Pulled Google Ads report — 367 conversions (+59.39 over last week) while spending $155.57 less</li>
+            </ul>
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>The 5-Step Process to HELOC-Funded Inventory Hedging</h3>
+            <p>A new strategy-focused blog post covering how flooring retailers and investors can leverage a
+                Home Equity Line of Credit (HELOC) to hedge against rising inventory costs. The post walks readers
+                through a five-step process for using low-interest credit to lock in current wholesale pricing
+                on premium hardwood flooring before supplier price increases take effect — positioning RCF as a
+                forward-thinking partner for cost-conscious buyers.</p>
+
+            <h3>Featured Image</h3>
+            <img class="report-img" src="featured-image-5-step-process-to-HELOC-inventory-hedging-blog.jpg"
+                alt="Featured image for the 5-Step Process to HELOC-Funded Inventory Hedging blog post" style="max-width:600px;">
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion — New Blog Post</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <p>A dedicated promotional graphic was created and posted across all major social media platforms to drive
+                traffic to the new HELOC inventory hedging blog post. The image highlights the five-step strategy,
+                calling out key benefits — locking in wholesale pricing, leveraging low-interest credit, and building
+                inventory before price increases — with a clear call-to-action to read the full blog.</p>
+            <img class="report-img" src="the-heloc-funded-inventory-hedge-all-social-posts-image.jpg"
+                alt="Social media promotional graphic for the HELOC inventory hedging blog post"
+                style="max-width:600px;">
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Facebook</div>
+                <div class="platform-chip"><span class="check">✓</span> Instagram</div>
+                <div class="platform-chip"><span class="check">✓</span> X (Twitter)</div>
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 3. FACEBOOK ADS -->
+        <h2>3. Facebook Ads — Free Flooring Samples</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+            <h3>Free Sample Campaign Creatives</h3>
+            <p>Two new Facebook ad creatives were designed and launched to promote RCF's free flooring sample offer.
+                The ads target homeowners and contractors interested in premium hardwood flooring, encouraging them
+                to request free samples before committing to a purchase — reducing friction in the buyer journey
+                and driving qualified leads.</p>
+
+            <div class="img-row">
+                <div>
+                    <img src="facebook-free-sample-ads.jpg"
+                        alt="Facebook free sample ad creative — version 1">
+                    <p class="img-caption">Ad Creative 1</p>
+                </div>
+                <div>
+                    <img src="facebook-free-sample-ads-2.jpg"
+                        alt="Facebook free sample ad creative — version 2">
+                    <p class="img-caption">Ad Creative 2</p>
+                </div>
+            </div>
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Facebook Ads</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 4. YOUTUBE SHORTS DRAFT -->
+        <h2>4. YouTube Shorts Draft</h2>
+        <div class="card">
+            <span class="badge shorts">YouTube Shorts</span>
+            <div class="callout draft">⚠ Rough Draft — Ready for Review</div>
+            <p>A new YouTube Short has been drafted and is ready for internal review before publishing.
+                The rough cut captures on-site construction footage and is being prepared for final editing
+                and posting to the channel.</p>
+
+            <div class="shorts-layout">
+                <div class="shorts-embed">
+                    <iframe src="https://www.youtube.com/embed/ukYO3fBfw24" title="YouTube Shorts draft" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h3>Draft Preview</h3>
+                    <img class="report-img" src="new short for youtube.png"
+                        alt="YouTube Shorts draft thumbnail" style="max-width:280px; border-radius:12px;">
+                </div>
+            </div>
+
+            <p><a href="https://youtube.com/shorts/ukYO3fBfw24" target="_blank">Watch draft on YouTube →</a></p>
+        </div>
+
+        <hr>
+
+        <!-- 5. SEO ANALYTICS -->
+        <h2>5. SEO Analytics — Google Search Console</h2>
+        <div class="card">
+            <span class="badge seo">SEO</span>
+            <h3>Last 7 Days vs. Previous 7 Days</h3>
+            <p>Key performance data from Google Search Console Insights for reallycheapfloors.com,
+                covering the last 7 days compared to the previous 7-day period.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">1.96K</div>
+                    <div class="stat-label">Total Clicks</div>
+                    <div class="stat-delta up">↑ 1%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">371K</div>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-delta down">↓ 18%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">↑ 62%</div>
+                    <div class="stat-label">Prefinished Solid Hardwood</div>
+                    <div class="stat-delta up">55 clicks — biggest gainer</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">266</div>
+                    <div class="stat-label">Homepage Clicks</div>
+                    <div class="stat-delta down">↓ 9% vs. prior period</div>
+                </div>
+            </div>
+
+            <h3>Source Screenshot</h3>
+            <img class="report-img" src="seo-analytics-search-console-data.png"
+                alt="Google Search Console Insights — last 7 days" style="max-width:700px;">
+        </div>
+
+        <hr>
+
+        <!-- 6. PINTEREST ANALYTICS -->
+        <h2>6. Pinterest Analytics</h2>
+        <div class="card">
+            <span class="badge analytics">Analytics</span>
+            <h3>7-Day Performance — Apr 23 to Apr 29, 2026</h3>
+            <p>Overall performance data from Pinterest Analytics for the Really Cheap Floors account,
+                comparing the selected 7-day window to the previous 7 days.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">4.25K</div>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-delta down">↓ 34%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">337</div>
+                    <div class="stat-label">Engagements</div>
+                    <div class="stat-delta down">↓ 23%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">68</div>
+                    <div class="stat-label">Outbound Clicks</div>
+                    <div class="stat-delta down">↓ 8.1%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">31</div>
+                    <div class="stat-label">Saves</div>
+                    <div class="stat-delta down">↓ 29%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3.38K</div>
+                    <div class="stat-label">Total Audience</div>
+                    <div class="stat-delta down">↓ 38%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">228</div>
+                    <div class="stat-label">Engaged Audience</div>
+                    <div class="stat-delta down">↓ 27%</div>
+                </div>
+            </div>
+
+            <h3>Source Screenshot</h3>
+            <img class="report-img" src="pinterest-analytics-data.jpg"
+                alt="Pinterest Analytics overview — Apr 23 to Apr 29, 2026" style="max-width:700px;">
+        </div>
+
+        <hr>
+
+        <!-- 7. X (TWITTER) ANALYTICS -->
+        <h2>7. X Analytics</h2>
+        <div class="card">
+            <span class="badge analytics">Analytics</span>
+            <h3>7-Day Performance — Apr 25 to May 1, 2026</h3>
+            <p>Account overview data from X (formerly Twitter) Analytics for the Really Cheap Floors account,
+                covering the last 7 days. Strong growth across impressions and engagement metrics.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value highlight">214</div>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-delta up">↑ 94%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">16.3%</div>
+                    <div class="stat-label">Engagement Rate</div>
+                    <div class="stat-delta up">↑ 124%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">35</div>
+                    <div class="stat-label">Engagements</div>
+                    <div class="stat-delta up">↑ 337%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8 / 30</div>
+                    <div class="stat-label">Verified Followers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Likes</div>
+                    <div class="stat-delta down">↓ 16%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Replies</div>
+                    <div class="stat-delta up">↑ 10K%</div>
+                </div>
+            </div>
+
+            <h3>Source Screenshot</h3>
+            <img class="report-img" src="twitter-analytics-data.jpg"
+                alt="X (Twitter) Analytics overview — last 7 days" style="max-width:700px;">
+        </div>
+
+        <hr>
+
+        <!-- 8. YOUTUBE ANALYTICS -->
+        <h2>8. YouTube Analytics — Last 7 Days</h2>
+        <div class="card">
+            <span class="badge youtube">YouTube</span>
+            <h3>Two-Channel Overview — Apr 24 to Apr 30, 2026</h3>
+            <p>Combined analytics from both YouTube channels for the last 7 days. Together the channels
+                generated 9.8K views, 168.6 hours of watch time, and $34.11 in estimated revenue.</p>
+
+            <h3>Channel 1 — ReallyCheapFloors.com (Main)</h3>
+            <p>The main channel pulled 4,421 views over the period. Views and watch time are down compared to the
+                prior week, but estimated revenue reached $10.82 and the channel now sits at 2,013 subscribers.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">4.4K</div>
+                    <div class="stat-label">Views</div>
+                    <div class="stat-delta down">↓ 72% vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">79.3 hrs</div>
+                    <div class="stat-label">Watch Time</div>
+                    <div class="stat-delta down">↓ 41% vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">+2</div>
+                    <div class="stat-label">Subscribers</div>
+                    <div class="stat-delta down">↓ 60% vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$10.82</div>
+                    <div class="stat-label">Est. Revenue</div>
+                </div>
+            </div>
+            <ul style="margin-top: 12px;">
+                <li><strong>Total Subscribers:</strong> 2,013</li>
+                <li><strong>Realtime (48 hrs):</strong> 1,447 views</li>
+                <li><strong>Top Video:</strong> Get Your BuilderTrend Mar… — 459 views</li>
+            </ul>
+
+            <h3>Source Screenshot — Main Channel</h3>
+            <img class="report-img" src="youtube-analytics-data-last-7-days.jpg"
+                alt="YouTube Studio analytics for the main ReallyCheapFloors.com channel — last 7 days" style="max-width:700px;">
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Channel 2 — Really Cheap Floors Podcast Clips</h3>
+            <p>The Podcast Clips channel outperformed the main channel this period with 5,412 views and 89.3 hours
+                of watch time — both roughly flat compared to the previous 7 days. Estimated revenue hit $23.29
+                and the channel now has 2,502 subscribers.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value highlight">5.4K</div>
+                    <div class="stat-label">Views</div>
+                    <div class="stat-delta up">≈ same as prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">89.3 hrs</div>
+                    <div class="stat-label">Watch Time</div>
+                    <div class="stat-delta up">≈ same as prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">+4</div>
+                    <div class="stat-label">Subscribers</div>
+                    <div class="stat-delta down">↓ 20% vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">$23.29</div>
+                    <div class="stat-label">Est. Revenue</div>
+                </div>
+            </div>
+            <ul style="margin-top: 12px;">
+                <li><strong>Total Subscribers:</strong> 2,502</li>
+                <li><strong>Realtime (48 hrs):</strong> 1,446 views</li>
+                <li><strong>Top Video:</strong> Can I Install Solid Hardwood… — 70 views</li>
+            </ul>
+
+            <h3>Source Screenshot — Podcast Clips Channel</h3>
+            <img class="report-img" src="youtube-analytics-clip-channel-data-last-7-days.jpg"
+                alt="YouTube Studio analytics for the Podcast Clips channel — last 7 days" style="max-width:700px;">
+        </div>
+
+        <hr>
+
+        <!-- 9. GOOGLE ADS REPORT -->
+        <h2>9. Google Ads Report — Last 7 Days</h2>
+        <div class="card">
+            <span class="badge google-ads">Google Ads</span>
+            <h3>Campaign Performance — Last 7 Days vs. Previous 7 Days</h3>
+
+            <div style="background: #e8f5e9; border: 2px solid #66bb6a; border-radius: 8px; padding: 16px 20px; margin: 16px 0; text-align: center;">
+                <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: #2e7d32; font-weight: 700; margin-bottom: 4px;">🎯 Conversion Growth</div>
+                <div style="font-size: 36px; font-weight: 800; color: #1b5e20; line-height: 1.2;">+59.39 Conversions</div>
+                <div style="font-size: 15px; color: #2e7d32; margin-top: 4px;">367.09 total projected conversions — while spending <strong>$155.57 less</strong> than the previous week</div>
+            </div>
+
+            <p>Google Ads delivered a standout week. Conversions climbed by 59.39 over the prior 7-day period
+                despite a meaningful decrease in total spend. The cost per conversion dropped by $3.60 to just $6.49,
+                signaling that the current traffic is converting at a significantly higher rate. While clicks fell by
+                1,417 compared to last week, the quality of those clicks clearly improved — fewer visitors, but far
+                more of them took action.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value highlight">367.09</div>
+                    <div class="stat-label">Conversions (Projected)</div>
+                    <div class="stat-delta up">↑ 59.39 vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$1,997.49</div>
+                    <div class="stat-label">Total Cost</div>
+                    <div class="stat-delta up">↓ $155.57 saved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value highlight">$6.49</div>
+                    <div class="stat-label">Cost / Conversion</div>
+                    <div class="stat-delta up">↓ $3.60 lower</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$0.95</div>
+                    <div class="stat-label">Avg. CPC</div>
+                    <div class="stat-delta down">↑ $0.34 vs. prev.</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2,111</div>
+                    <div class="stat-label">Clicks</div>
+                    <div class="stat-delta down">↓ 1,417 vs. prev. 7 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">11</div>
+                    <div class="stat-label">Active Campaigns</div>
+                </div>
+            </div>
+
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 14px 18px; margin-top: 16px; font-size: 14px; color: #555;">
+                <strong style="color: #333;">💡 Key Takeaway:</strong> Clicks dropped by 40%, yet conversions rose significantly.
+                This suggests the previous week's traffic included a higher volume of low-intent clicks. The current
+                campaigns are attracting fewer but higher-quality visitors who are more likely to convert — a healthier,
+                more efficient ad spend.
+            </div>
+
+            <h3>Source Screenshot</h3>
+            <img class="report-img" src="Google Ads report.jpg"
+                alt="Google Ads campaign dashboard — last 7 days vs. previous 7 days" style="max-width:700px;">
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
