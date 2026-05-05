@@ -306,6 +306,26 @@
             border-color: #2c2c2c;
             text-decoration: none;
         }
+
+        .img-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row-3 img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .img-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -317,7 +337,7 @@
         </p>
 
         <div class="summary">
-            <strong>Six deliverables completed today:</strong>
+            <strong>Seven deliverables completed today:</strong>
             <ul style="margin-top: 8px; margin-bottom: 0;">
                 <li>Published a new blog post — <em>How Tariffs Impact Flooring Prices in 2025 and 2026?</em> — with a custom featured image</li>
                 <li>Created and shared a promotional graphic across Pinterest, Facebook, Instagram, and X to drive blog traffic</li>
@@ -325,6 +345,7 @@
                 <li>Proposed a homepage layout update with annotated mockup</li>
                 <li>Invoice feature approved — developers will follow up on project completion timeline</li>
                 <li>Page Speed optimization project update — $400/mo investment to cut load times nearly in half</li>
+                <li>Paden drafted 3 new social media product posts</li>
             </ul>
         </div>
 
@@ -482,6 +503,38 @@
         <div class="card">
             <span class="badge maint">Maintenance</span>
             <p style="color: #888; font-style: italic;">No website updates or maintenance tasks completed today. This section will be updated as changes are made.</p>
+        </div>
+
+        <hr>
+
+        <!-- 7. PADEN'S POSTS -->
+        <h2>7. Paden's Posts</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <p>Paden drafted three new social media product posts featuring flooring products with
+                lifestyle photography and sales copy. Each post highlights product specs, key selling points,
+                pricing advantages, and a call-to-action with a direct link to the product page.</p>
+
+            <div class="img-row-3">
+                <div>
+                    <img src="3 inch cabin grade hickory lakes under three dollars per square foot.jpg"
+                        alt="3-inch Cabin Grade Hickory Lakes — under $3/SF social post">
+                    <p class="img-caption">Cabin Grade Hickory</p>
+                    <a class="view-full-btn" href="3 inch cabin grade hickory lakes under three dollars per square foot.jpg" target="_blank" style="display:block; text-align:center; margin-top:4px;">View Full Image ↗</a>
+                </div>
+                <div>
+                    <img src="peachtree vinyl true brew lvp social image post.jpg"
+                        alt="Peachtree Classic True Brew LVP social post">
+                    <p class="img-caption">Peachtree True Brew LVP</p>
+                    <a class="view-full-btn" href="peachtree vinyl true brew lvp social image post.jpg" target="_blank" style="display:block; text-align:center; margin-top:4px;">View Full Image ↗</a>
+                </div>
+                <div>
+                    <img src="peachtree classic dusty gray 1 dollar and fourty nine cents per square foot.jpg"
+                        alt="Peachtree Classic Dusty Gray at $1.49/SF social post">
+                    <p class="img-caption">Peachtree Dusty Gray</p>
+                    <a class="view-full-btn" href="peachtree classic dusty gray 1 dollar and fourty nine cents per square foot.jpg" target="_blank" style="display:block; text-align:center; margin-top:4px;">View Full Image ↗</a>
+                </div>
+            </div>
         </div>
 
         <hr>
