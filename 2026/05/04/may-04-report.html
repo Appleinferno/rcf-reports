@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 04 Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        .badge.dev {
+            background: #6a1b9a;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.approved {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #1b5e20;
+        }
+
+        .view-full-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B665F;
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 4px;
+            padding: 5px 12px;
+            margin-top: 6px;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .view-full-btn:hover {
+            background: #2c2c2c;
+            color: #fff;
+            border-color: #2c2c2c;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — May 04, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+            <strong>Six deliverables completed today:</strong>
+            <ul style="margin-top: 8px; margin-bottom: 0;">
+                <li>Published a new blog post — <em>How Tariffs Impact Flooring Prices in 2025 and 2026?</em> — with a custom featured image</li>
+                <li>Created and shared a promotional graphic across Pinterest, Facebook, Instagram, and X to drive blog traffic</li>
+                <li>Updated 6 Facebook Ads with refreshed creative and copy</li>
+                <li>Proposed a homepage layout update with annotated mockup</li>
+                <li>Invoice feature approved — developers will follow up on project completion timeline</li>
+                <li>Page Speed optimization project update — $400/mo investment to cut load times nearly in half</li>
+            </ul>
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>How Tariffs Impact Flooring Prices in 2025 and 2026?</h3>
+            <p>A new timely blog post examining how recent and upcoming tariff policies are affecting
+                the flooring industry — from increased import duties on Chinese-manufactured LVP and
+                engineered hardwood to shifting supply chains across Southeast Asia and Europe. The article
+                breaks down which flooring categories are most impacted, how retailers are adjusting pricing,
+                and why buying now at pre-tariff inventory levels could save customers significantly
+                compared to waiting.</p>
+
+            <h3>Featured Image</h3>
+            <img class="report-img" src="../02/how tarriffs impact flooring prices featured image.jpg"
+                alt="Featured image for the How Tariffs Impact Flooring Prices blog post" style="max-width:600px;">
+            <a class="view-full-btn" href="../02/how tarriffs impact flooring prices featured image.jpg" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion — New Blog Post</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <p>A dedicated promotional graphic was created and posted across all major social media platforms to drive
+                traffic to the new <em>How Tariffs Impact Flooring Prices in 2025 and 2026?</em> blog post. The image
+                highlights the key takeaways — which flooring types are hit hardest by tariffs, the real cost
+                impact for consumers, and why RCF's current pre-tariff inventory represents a limited-time
+                value opportunity.</p>
+            <img class="report-img" src="../02/pinterest image for the blog how tarriffs impact flooring prices.jpg"
+                alt="Social media promotional graphic for the How Tariffs Impact Flooring Prices blog post"
+                style="max-width:600px;">
+            <a class="view-full-btn" href="../02/pinterest image for the blog how tarriffs impact flooring prices.jpg" target="_blank">View Full Image ↗</a>
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+                <div class="platform-chip"><span class="check">✓</span> Facebook</div>
+                <div class="platform-chip"><span class="check">✓</span> Instagram</div>
+                <div class="platform-chip"><span class="check">✓</span> X (Twitter)</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 3. DEVELOPER TASKS -->
+        <h2>3. Developer Tasks</h2>
+        <div class="card">
+            <span class="badge dev">Developer</span>
+
+            <h3>New Invoice Feature — Approved ✓</h3>
+            <div class="callout approved">✓ Approved Today — Developers Will Follow Up on Completion Timeline</div>
+            <p>The new invoice generation feature has been reviewed and officially approved. The development
+                team will be reaching out shortly with an estimated completion date and any remaining
+                implementation details. This feature will streamline RCF's invoicing workflow, enabling
+                faster order processing, cleaner record-keeping, and a more professional buyer experience.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="../01/developer-task-for-new-invoice-project.jpg"
+                alt="Screenshot of the approved invoice feature" style="max-width:700px;">
+            <a class="view-full-btn" href="../01/developer-task-for-new-invoice-project.jpg" target="_blank">View Full Image ↗</a>
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Page Speed Optimization Project — Update</h3>
+            <p>Ongoing investment in the site-wide page speed optimization initiative. The project runs at
+                approximately <strong>$400/month for three months</strong> with a clear performance target:
+                reduce full page load time from the current <strong>6–7 seconds down to 4–5 seconds</strong>,
+                and bring our Largest Contentful Paint (LCP) from <strong>1.8 seconds below 1 second</strong>.</p>
+
+            <div class="stats-grid" style="margin: 16px 0;">
+                <div class="stat-card">
+                    <div class="stat-value">6–7s</div>
+                    <div class="stat-label">Current Load Time</div>
+                    <div class="stat-delta down">Target: 4–5s</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1.8s</div>
+                    <div class="stat-label">Current LCP</div>
+                    <div class="stat-delta down">Target: &lt; 1s</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">~$400</div>
+                    <div class="stat-label">Monthly Cost</div>
+                    <div class="stat-delta">3-month engagement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">~$1,200</div>
+                    <div class="stat-label">Total Investment</div>
+                    <div class="stat-delta">Full project scope</div>
+                </div>
+            </div>
+
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 14px 18px; margin-top: 16px; font-size: 14px; color: #555;">
+                <strong style="color: #333;">📊 Why This Matters:</strong> According to Google and Deloitte research,
+                every <strong>0.1 second improvement</strong> in mobile site speed increases conversion rates by up to
+                <strong>8.4%</strong> for retail sites. For ecommerce buyers specifically, pages that load in under
+                2 seconds have a <strong>15% higher conversion rate</strong> than pages loading in 4+ seconds. Faster
+                load times also directly reduce bounce rates — 53% of mobile users abandon a site that takes
+                longer than 3 seconds to load.
+            </div>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="../01/developer-task-for-new-invoice-project.jpg"
+                alt="Screenshot of the Page Speed optimization project update" style="max-width:700px;">
+            <a class="view-full-btn" href="../01/developer-task-for-new-invoice-project.jpg" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 4. FACEBOOK ADS -->
+        <h2>4. Facebook Ads — Updated Creatives</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+            <h3>6 Facebook Ads Updated</h3>
+            <p>Refreshed creative and ad copy across 6 active Facebook ad campaigns. Updates include
+                revised imagery, updated headlines, and optimized call-to-action text to improve
+                click-through rates and keep the ads performing well against audience fatigue.
+                Regularly rotating ad creatives helps maintain engagement and prevents declining
+                returns from overexposed content.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="updated 6 facebook ads.png"
+                alt="Screenshot showing 6 updated Facebook ad creatives" style="max-width:700px;">
+            <a class="view-full-btn" href="updated 6 facebook ads.png" target="_blank">View Full Image ↗</a>
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Facebook Ads</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 5. PROPOSED HOMEPAGE UPDATE -->
+        <h2>5. Proposed Homepage Update</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+            <h3>Homepage Layout Revision — Annotated Mockup</h3>
+            <p>A proposed update to the ReallyCheapFloors.com homepage layout. The annotated screenshot
+                below highlights the recommended changes — including repositioned content blocks,
+                updated visual hierarchy, and improved call-to-action placement — designed to increase
+                engagement and drive more conversions from homepage traffic.</p>
+
+            <img class="report-img" src="homepage change with arrows.png"
+                alt="Annotated mockup of the proposed homepage layout update">
+            <a class="view-full-btn" href="homepage change with arrows.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 6. WEBSITE UPDATES / MAINTENANCE -->
+        <h2>6. Website Updates &amp; Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+            <p style="color: #888; font-style: italic;">No website updates or maintenance tasks completed today. This section will be updated as changes are made.</p>
+        </div>
+
+        <hr>
+
+    </div>
+</body>
+
+</html>
