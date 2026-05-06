@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 05 Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        .badge.dev {
+            background: #6a1b9a;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.approved {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #1b5e20;
+        }
+
+        .view-full-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B665F;
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 4px;
+            padding: 5px 12px;
+            margin-top: 6px;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .view-full-btn:hover {
+            background: #2c2c2c;
+            color: #fff;
+            border-color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        .img-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row-3 img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .img-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — May 05, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>The Best Wide Plank Engineered Hardwood for Modern Floorplans: 1st Quality Picks Under $3/Sq Ft</h3>
+            <p>A new blog post highlighting the top wide plank engineered hardwood options available at
+                ReallyCheapFloors.com — all first-quality, discontinued inventory priced under $3 per square
+                foot. The article walks homeowners through why wide plank formats are ideal for modern open-concept
+                layouts, what to look for in wear layer thickness and construction quality, and showcases
+                specific products currently in stock that deliver premium aesthetics at a fraction of
+                standard retail pricing.</p>
+
+            <h3>Featured Image</h3>
+            <img class="report-img" src="wide plank engineered hardwood nobles way winter river for sale at really cheap floors featured blog image.jpg"
+                alt="Featured image for The Best Wide Plank Engineered Hardwood blog post" style="max-width:600px;">
+            <a class="view-full-btn" href="wide plank engineered hardwood nobles way winter river for sale at really cheap floors featured blog image.jpg" target="_blank">View Full Image ↗</a>
+            <p style="margin-top: 12px;"><a href="https://www.reallycheapfloors.com/blog/best-wide-plank-engineered-hardwood-for-modern-floorplans/" target="_blank">Read the Full Blog Post ↗</a></p>
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <p>A promotional graphic was created and shared across all major social media platforms to drive
+                traffic to the new <em>The Best Wide Plank Engineered Hardwood for Modern Floorplans</em> blog
+                post. The image highlights the premium quality and sub-$3/SF pricing of RCF's wide plank
+                inventory, targeting homeowners researching modern flooring upgrades.</p>
+            <img class="report-img" src="wide plank engineered hardwood nobles way winter river for sale at really cheap floors featured blog image.jpg"
+                alt="Social media promotional graphic for the Wide Plank Engineered Hardwood blog post"
+                style="max-width:600px;">
+            <a class="view-full-btn" href="wide plank engineered hardwood nobles way winter river for sale at really cheap floors featured blog image.jpg" target="_blank">View Full Image ↗</a>
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+                <div class="platform-chip"><span class="check">✓</span> Facebook</div>
+                <div class="platform-chip"><span class="check">✓</span> Instagram</div>
+                <div class="platform-chip"><span class="check">✓</span> X (Twitter)</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 3. DEVELOPER TASKS -->
+        <h2>3. Developer Tasks</h2>
+        <div class="card">
+            <span class="badge dev">Developer</span>
+
+            <h3>New Invoice Referral Selection — Complete ✓</h3>
+            <div class="callout approved">✓ Complete — Invoice Referral Selection Feature Is Now Live</div>
+            <p>The new invoice referral selection feature has been completed and deployed. This update allows
+                the invoicing system to capture referral source information directly during the invoice
+                creation process, streamlining attribution tracking and improving visibility into which
+                channels are driving sales.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="invoice referral task complete.png"
+                alt="Screenshot showing the completed invoice referral selection feature" style="max-width:700px;">
+            <a class="view-full-btn" href="invoice referral task complete.png" target="_blank">View Full Image ↗</a>
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Homepage Layout Change — Approved & In Progress</h3>
+            <div class="callout">⏳ Approved — $80 Quote Accepted, Development Underway</div>
+            <p>The proposed homepage layout update has been reviewed and approved. The quoted cost for this
+                change is <strong>$80</strong>. The development team is now working on implementing the
+                updated layout, which includes repositioned content blocks and improved visual hierarchy
+                to increase engagement and drive more conversions from homepage traffic.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="new homepage change approved.png"
+                alt="Screenshot showing the approved homepage change task in progress" style="max-width:700px;">
+            <a class="view-full-btn" href="new homepage change approved.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 4. FACEBOOK ADS -->
+        <h2>4. Facebook Ads</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+        </div>
+
+        <hr>
+
+        <!-- 5. PROPOSED HOMEPAGE UPDATE -->
+        <h2>5. Proposed Homepage Update</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+
+            <h3>Homepage Layout Revision — Approved ✓</h3>
+            <div class="callout approved">✓ Approved — $80 Quote Accepted for Homepage Update</div>
+            <p>The proposed homepage layout change has been reviewed and approved at a cost of
+                <strong>$80</strong>. This update includes repositioned content blocks, improved visual
+                hierarchy, and optimized call-to-action placement — all designed to increase engagement
+                and drive more conversions from homepage traffic.</p>
+
+            <h3>Homepage Change Reference</h3>
+            <img class="report-img" src="../04/homepage change.jpg"
+                alt="Annotated mockup of the approved homepage layout update">
+            <a class="view-full-btn" href="../04/homepage change.jpg" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 6. WEBSITE UPDATES / MAINTENANCE -->
+        <h2>6. Website Updates &amp; Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+
+            <h3>Fixed Dalton Location Image in Footer</h3>
+            <p>Corrected a broken or misaligned image in the site footer for the Dalton warehouse location.
+                The footer now properly displays the location image, ensuring a consistent and professional
+                appearance across all pages site-wide.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="fixed dalton location footer.png"
+                alt="Screenshot showing the fixed Dalton location image in the website footer" style="max-width:700px;">
+            <a class="view-full-btn" href="fixed dalton location footer.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 7. PADEN'S POSTS -->
+        <h2>7. Paden's Posts</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+
+            <h3>Pinterest Board Cleanup & New Pinning Strategy</h3>
+            <p>Cleaned up the Really Cheap Floors Pinterest account by <strong>deleting 6 underperforming
+                boards</strong> that were cluttering the profile and diluting engagement. The remaining boards
+                are now tightly focused on the core product categories that drive the most traffic and interest.</p>
+
+            <p>Going forward, we are implementing a new daily pinning strategy: <strong>4–6 product pins
+                will be published every day</strong> using Paden's new product posts as the source content.
+                Each pin will feature product photography, key specs, pricing callouts, and a direct link
+                back to the product page on ReallyCheapFloors.com. This consistent cadence is designed to
+                boost Pinterest impressions, grow follower count, and drive qualified traffic to the site.</p>
+
+            <h3>Pinterest Boards Overview</h3>
+            <img class="report-img" src="all pinterest pins screenshot.jpg"
+                alt="Screenshot showing all Pinterest boards for Really Cheap Floors" style="max-width:700px;">
+            <a class="view-full-btn" href="all pinterest pins screenshot.jpg" target="_blank">View Full Image ↗</a>
+
+            <div class="platform-grid">
+                <div class="platform-chip"><span class="check">✓</span> 6 Boards Deleted</div>
+                <div class="platform-chip"><span class="check">✓</span> 4–6 Pins / Day</div>
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+            </div>
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Paden Post 1 — Dogwood Parson 7.5" Red Oak at $2.39/SF</h3>
+            <img class="report-img" src="paden post 1.png"
+                alt="Paden's social media post for Dogwood Parson 7.5 inch Red Oak flooring" style="max-width:600px;">
+            <a class="view-full-btn" href="paden post 1.png" target="_blank">View Full Image ↗</a>
+
+            <h3>Post Copy</h3>
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 16px 20px; margin-top: 8px; font-size: 14px; color: #444; line-height: 1.7;">
+                <p>Our Dogwood flooring in Parson features a 7.5 inch width and is available now for $2.39 per
+                    square foot. Finding a wide plank engineered hardwood at this price is a rare opportunity for
+                    any homeowner looking to upgrade their space. We are able to offer this deal because this is a
+                    first quality discontinued product. This means you receive the exact same manufacturing standards
+                    as a current line but at a fraction of the original retail cost.</p>
+
+                <p>The 7.5 inch width is a major highlight for this product. Wide planks create a more open and
+                    modern feel in a room by reducing the number of visible seams. This specific flooring is
+                    constructed from genuine Red Oak with a total thickness of one half inch. Red Oak is known for
+                    its natural strength and traditional appeal, and the half inch profile provides a sturdy
+                    foundation that outperforms thinner alternatives often found in big box stores.</p>
+
+                <p>The surface texture is another key benefit for your home. This flooring features a wirebrushed
+                    finish which adds character and depth to the wood. More importantly, the wirebrushed texture
+                    combined with a low gloss finish is extremely forgiving. It hides the dust and minor scuffs
+                    that naturally occur in a busy household, keeping your floors looking fresh for years to come.
+                    Because it is an engineered product, you have the flexibility to install it via glue, float,
+                    or staple methods on any level of your home.</p>
+
+                <p style="margin-bottom: 0;">We currently have over five thousand square feet in stock, but once this discontinued inventory
+                    is gone, we cannot get more at this price point. Call us at 1-800-253-2728 to find out if you
+                    qualify for our $250 delivery option.</p>
+            </div>
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Paden Post 2 — Palmetto Road Shenandoah Shadow 5" Solid Oak at $2.99/SF</h3>
+            <img class="report-img" src="paden post 2 palmetto road shadow.png"
+                alt="Paden's social media post for Palmetto Road Shenandoah Shadow 5 inch Solid Oak flooring" style="max-width:600px;">
+            <a class="view-full-btn" href="paden post 2 palmetto road shadow.png" target="_blank">View Full Image ↗</a>
+
+            <h3>Post Copy</h3>
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 16px 20px; margin-top: 8px; font-size: 14px; color: #444; line-height: 1.7;">
+                <p>Our Palmetto Road flooring in Shenandoah Shadow features a 5 inch width and is available for
+                    only $2.99 per square foot. Finding a first quality solid hardwood at this price point is a
+                    significant advantage for anyone planning a home renovation. This is a dropped product line,
+                    which means you receive a top tier floor for a fraction of its original retail cost.</p>
+
+                <p>The construction is a true three quarter inch solid Oak. Unlike thinner materials or laminates,
+                    this solid wood allows for a 50 year residential warranty and the ability to refinish the boards
+                    in the future if your style preferences change. The surface is protected by a urethane finish
+                    reinforced with aluminum oxide. This specific finish creates a hard barrier against scratches
+                    and scuffs which is ideal for active households with kids or pets.</p>
+
+                <p>The aesthetic details of this floor provide both style and practical benefits. The wirebrushed
+                    texture and low gloss finish work together to hide dust and footprints that are often visible
+                    on shinier floors. Each plank features a pillowed edge and end, giving the installation a soft
+                    and custom appearance. With high color variation across the boards, this Oak floor provides a
+                    natural and authentic look that adds character to any room. We have nearly 26,000 square feet
+                    in stock, but this inventory will not be replaced once it is sold.</p>
+
+                <p style="margin-bottom: 0;">Call us at 1-800-253-2728 to find out if you qualify for our $250 delivery option.</p>
+            </div>
+
+            <hr style="margin: 24px 0;">
+
+            <h3>Paden Post 3 — Western Plank Drift 8.25" White Oak at $2.49/SF</h3>
+            <img class="report-img" src="paden post 3 western plank drift.png"
+                alt="Paden's social media post for Western Plank Drift 8.25 inch White Oak flooring" style="max-width:600px;">
+            <a class="view-full-btn" href="paden post 3 western plank drift.png" target="_blank">View Full Image ↗</a>
+
+            <h3>Post Copy</h3>
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 16px 20px; margin-top: 8px; font-size: 14px; color: #444; line-height: 1.7;">
+                <p>Our Western Plank in the Drift color features an 8.25 inch width and is priced at just $2.49
+                    per square foot. Finding a White Oak engineered floor with these specifications at this price
+                    point is a significant opportunity for any homeowner. We are offering this Builder A grade
+                    inventory at a steep discount compared to standard retail pricing.</p>
+
+                <p>One of the most critical specifications for this product is the 3.5 mm wear layer. This thick
+                    surface of real White Oak allows the floor to be sanded and refinished in the future, providing
+                    a lifespan that far exceeds cheaper alternatives with thin veneers. Most floors at this price
+                    point cannot be repaired once they are worn, but this product is built for longevity.</p>
+
+                <p>The 8.25 inch width is another major benefit for your space. Wide planks create a clean look
+                    with fewer seams, making your rooms appear larger and more cohesive. With a total thickness of
+                    9/16 of an inch, this flooring provides a sturdy foundation that is compatible with nail, staple,
+                    glue, or floating installation methods. It is even rated for use over radiant heat systems.</p>
+
+                <p>The surface is finished with a wirebrushed texture and a low gloss urethane. This is a practical
+                    choice for high traffic areas because the texture hides small scuffs and the low gloss finish
+                    minimizes the appearance of dust and footprints. You are getting the durability of White Oak and
+                    the stability of an engineered construction in one package.</p>
+
+                <p style="margin-bottom: 0;">Call us at 1-800-253-2728 to find out if you qualify for our $250 delivery option.</p>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+</body>
+
+</html>
