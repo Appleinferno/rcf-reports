@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 06 Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        .badge.dev {
+            background: #6a1b9a;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.approved {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #1b5e20;
+        }
+
+        .view-full-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B665F;
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 4px;
+            padding: 5px 12px;
+            margin-top: 6px;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .view-full-btn:hover {
+            background: #2c2c2c;
+            color: #fff;
+            border-color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        .img-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row-3 img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .img-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — May 06, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>Top Durable Solid Hardwood Options for Traditional Homes in 2026</h3>
+            <p>If you're shopping for the top durable solid hardwood options for traditional homes, here's a
+                number that should stop you in your tracks: installing new solid hardwood floors provides a
+                118% return on investment, meaning the project fully pays for itself and then some.</p>
+
+            <h3>Featured Image</h3>
+            <img class="report-img" src="https://www.reallycheapfloors.com/media/webp_image/blog/wide_plank_engineered_hardwood_nobles_way_winter_river_for_sale_at_really_cheap_floors_featured_blog_image.webp"
+                alt="Featured image for Top Durable Solid Hardwood Options for Traditional Homes blog post" style="max-width:600px;">
+
+            <p><a href="solid-hardwood-blog.html" target="_blank">Read the Full Blog Post ↗</a></p>
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion (Paden Works on this Today)</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+
+            <img class="report-img" src="paden to produce today.png"
+                alt="Screenshot of Paden's social media tasks for today" style="max-width:700px;">
+            <a class="view-full-btn" href="paden to produce today.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 3. DEVELOPER TASKS -->
+        <h2>3. Developer Tasks</h2>
+        <div class="card">
+            <span class="badge dev">Developer</span>
+
+            <h3>Homepage Map Embed — Staged for Review</h3>
+            <p>Biraj deployed the custom Google Maps embed to the staging server for review.
+                The map is now visible on the homepage at
+                <a href="https://beta.reallycheapfloors.com/" target="_blank">beta.reallycheapfloors.com</a>.
+                If everything looks correct, it can be pushed to production by tomorrow.</p>
+
+            <div class="callout">⏳ Question for Terry: Zoomed in like this? Or zoom out some more?</div>
+        </div>
+
+        <hr>
+
+        <!-- 4. FACEBOOK ADS -->
+        <h2>4. Facebook Ads</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+
+            <h3>Ad 1 — Price Shock Lead: Canyon Elements "Cedar Creek" at $2.49/SF</h3>
+
+            <img class="report-img" src="noblels-way_Caney-ROOM-1.jpg"
+                alt="Facebook ad creative for Canyon Elements Cedar Creek White Oak" style="max-width:600px;">
+            <a class="view-full-btn" href="noblels-way_Caney-ROOM-1.jpg" target="_blank">View Full Image ↗</a>
+
+            <h3>Headline</h3>
+            <p><strong>$2.49/SF | 7.25" Wirebrushed White Oak — 1st Quality</strong></p>
+
+            <h3>Ad Copy</h3>
+            <div style="background: #f9f9f6; border: 1px solid #e0ddd6; border-radius: 6px; padding: 16px 20px; margin-top: 8px; font-size: 14px; color: #444; line-height: 1.7;">
+                <p>Engineered White Oak with a warm honey tone, 7.25" wide plank, wirebrushed texture — $2.49 a square foot.</p>
+
+                <p>Canyon Elements "Cedar Creek" is the kind of floor you see in $500K+ new builds. Warm, natural, full of character. And we're selling it for less than most people pay for vinyl plank.</p>
+
+                <p><strong>The specs:</strong><br>
+                    → Species: White Oak<br>
+                    → Width: 7.25" wide plank<br>
+                    → Thickness: 3/8" engineered<br>
+                    → Surface: Wirebrushed<br>
+                    → Grade: 1st Quality<br>
+                    → Install: Glue, float, or staple — your choice</p>
+
+                <p style="margin-bottom: 0;">7,600 SF available. That covers most whole-home projects, but at this price it won't sit long. Ships from Murphy, NC.</p>
+            </div>
+
+            <div class="platform-grid" style="margin-top: 16px;">
+                <div class="platform-chip"><span class="check">✓</span> Facebook Ads</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 5. SHOP PAGE UPDATE -->
+        <h2>5. Shop Page Update</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+
+            <h3>New Solid Shop Page Order</h3>
+            <img class="report-img" src="new solid shop page order.png"
+                alt="Screenshot of the new solid shop page product order" style="max-width:700px;">
+            <a class="view-full-btn" href="new solid shop page order.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 6. WEBSITE UPDATES / MAINTENANCE -->
+        <h2>6. Website Updates &amp; Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+
+            <h3>Developer Payment Failed</h3>
+            <p>Our scheduled payment to the development team failed to process. This needs to be resolved
+                promptly to avoid any delays in ongoing work, including the homepage map deployment and
+                other queued tasks.</p>
+
+            <h3>Screenshot</h3>
+            <img class="report-img" src="web maintinence update.png"
+                alt="Screenshot showing the failed developer payment notification" style="max-width:700px;">
+            <a class="view-full-btn" href="web maintinence update.png" target="_blank">View Full Image ↗</a>
+        </div>
+
+        <hr>
+
+        <!-- 7. PADEN'S POSTS -->
+        <h2>7. Paden's Posts</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+
+            <h3>Paden Post 1 — Pinterest Pin: Choosing the Best Flooring Nailer for Your Hardwood Installation</h3>
+            <img class="report-img" src="choosing the best flooring nailer for your hardwood installation.png"
+                alt="Pinterest pin — Choosing the Best Flooring Nailer for Your Hardwood Installation" style="max-width:600px;">
+            <a class="view-full-btn" href="choosing the best flooring nailer for your hardwood installation.png" target="_blank">View Full Image ↗</a>
+
+            <div class="platform-grid" style="margin-top: 16px;">
+                <div class="platform-chip"><span class="check">✓</span> Pinterest</div>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+</body>
+
+</html>
