@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report — May 15, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        .badge.dev {
+            background: #6a1b9a;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.approved {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #1b5e20;
+        }
+
+        .view-full-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B665F;
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 4px;
+            padding: 5px 12px;
+            margin-top: 6px;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .view-full-btn:hover {
+            background: #2c2c2c;
+            color: #fff;
+            border-color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        .img-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row-3 img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .img-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — May 15, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+            <strong>Deliverables completed today:</strong>
+            <ul style="margin-top: 8px; margin-bottom: 0;">
+                <!-- Add summary items here -->
+                <li>New blog post published — Top Floating Engineered Hardwood Options for Quick DIY Installation in 2026</li>
+            </ul>
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <h3>Best Engineered Wood Flooring for Multi Level Residential Homes in 2026</h3>
+            <img class="report-img"
+                src="Canyon Elements Cedar Creek 7.25 inch wide 1st Quality for sale at really cheap floors.jpg"
+                alt="Canyon Elements Cedar Creek 7.25 inch wide 1st Quality featured blog image for Best Engineered Wood Flooring for Multi Level Residential Homes in 2026">
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <h3>Blog Promotion — Best Engineered Wood Flooring for Multi Level Residential Homes</h3>
+            <img class="report-img"
+                src="social media promotion of Best Engineered Wood Flooring for Multi Level Residential Homes in 2026 pinterest image.jpg"
+                alt="Pinterest promotion for Best Engineered Wood Flooring for Multi Level Residential Homes in 2026 blog post">
+        </div>
+
+        <hr>
+
+        <!-- 3. DEVELOPER TASKS -->
+        <h2>3. Developer Tasks</h2>
+        <div class="card">
+            <span class="badge dev">Developer</span>
+            <h3>Master Page Cards Update</h3>
+            <img class="report-img"
+                src="devs task on master page cards.png"
+                alt="Developer task on master page cards">
+            <h3>Master Page SKU Cards Update</h3>
+            <img class="report-img"
+                src="dev update on master page SKU cards.png"
+                alt="Developer update on master page SKU cards">
+
+            <h3>Map Completed</h3>
+            <img class="report-img"
+                src="map completed.png"
+                alt="Completed map for developer tasks">
+        </div>
+
+        <hr>
+
+        <!-- 4. FACEBOOK ADS -->
+        <h2>4. Facebook Ads</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+            <h3>Rustic Plank Ad</h3>
+            <img class="report-img"
+                src="rustic plank ad.png"
+                alt="Rustic plank Facebook ad creative">
+            <h3>Whiskey Barrel Vinyl Plank Ad</h3>
+            <img class="report-img"
+                src="whiskey barrel vinyl plank ad image.jpg"
+                alt="Whiskey barrel vinyl plank Facebook ad creative">
+        </div>
+
+        <hr>
+
+        <!-- 5. GOOGLE ADS -->
+        <h2>5. Google Ads</h2>
+        <div class="card">
+            <span class="badge google-ads">Google Ads</span>
+            <h3>Rustic Plank Ad</h3>
+            <img class="report-img"
+                src="google ad image for rustic plank.jpg"
+                alt="Rustic plank Google ad creative">
+            <h3>Whiskey Barrel Vinyl Plank Ad</h3>
+            <img class="report-img"
+                src="whiskey barrel vinyl plank ad image.jpg"
+                alt="Whiskey barrel vinyl plank Google ad creative">
+        </div>
+
+        <hr>
+
+        <!-- 6. SHOP PAGE UPDATE -->
+        <h2>6. Shop Page Update</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+            <!-- Content here -->
+        </div>
+
+        <hr>
+
+        <!-- 7. WEBSITE UPDATES / MAINTENANCE -->
+        <h2>7. Website Updates &amp; Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+            <h3>New Homepage Content</h3>
+            <img class="report-img"
+                src="new homepage content.jpg"
+                alt="New homepage content update">
+        </div>
+
+        <hr>
+
+        <!-- 8. PADEN'S POSTS -->
+        <h2>8. Paden's Posts</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <h3>Paden's Social Post — May 14</h3>
+            <img class="report-img"
+                src="paden posts.jpg"
+                alt="Paden's social media post for May 14">
+            <h3>Winchester Strip</h3>
+            <img class="report-img"
+                src="winchester strip.jpg"
+                alt="Winchester strip social post">
+        </div>
+
+        <hr>
+
+        <!-- 9. X (TWITTER) ADS -->
+        <h2>9. X (Twitter) Ads</h2>
+        <div class="card">
+            <span class="badge ads">X Ads</span>
+            <h3>New X Ads</h3>
+            <img class="report-img"
+                src="New X ads.png"
+                alt="New X (Twitter) ad creatives">
+        </div>
+
+    </div>
+</body>
+
+</html>
