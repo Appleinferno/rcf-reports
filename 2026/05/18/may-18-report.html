@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report — May 18, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .meta span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .summary {
+            background: #fff;
+            border-left: 4px solid #b5451b;
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 36px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0ddd6;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 8px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .badge.blog {
+            background: #b5451b;
+        }
+
+        .badge.video {
+            background: #6a1b9a;
+        }
+
+        .badge.social {
+            background: #2e7d32;
+        }
+
+        .badge.design {
+            background: #00838f;
+        }
+
+        .badge.shorts {
+            background: #ff0000;
+        }
+
+        .badge.maint {
+            background: #1565c0;
+        }
+
+        .badge.ads {
+            background: #1877f2;
+        }
+
+        .badge.youtube {
+            background: #ff0000;
+        }
+
+        .badge.google-ads {
+            background: #4285f4;
+        }
+
+        .badge.seo {
+            background: #e37400;
+        }
+
+        .badge.analytics {
+            background: #c2185b;
+        }
+
+        .badge.dev {
+            background: #6a1b9a;
+        }
+
+        img.report-img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            display: block;
+        }
+
+        a {
+            color: #b5451b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin: 16px 0 4px;
+        }
+
+        .platform-chip {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .platform-chip .check {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 32px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-value.highlight {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-value.down {
+            color: #c62828;
+        }
+
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .stat-card .stat-delta {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .stat-card .stat-delta.up {
+            color: #2e7d32;
+        }
+
+        .stat-card .stat-delta.down {
+            color: #c62828;
+        }
+
+        .stat-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #e65100;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .callout.approved {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #1b5e20;
+        }
+
+        .view-full-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B665F;
+            background: #f9f9f6;
+            border: 1px solid #e0ddd6;
+            border-radius: 4px;
+            padding: 5px 12px;
+            margin-top: 6px;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        .view-full-btn:hover {
+            background: #2c2c2c;
+            color: #fff;
+            border-color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        .img-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .img-row-3 img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .img-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Daily Report — May 18, 2026</h1>
+        <p class="meta"><span>Client:</span> ReallyCheapFloors.com &nbsp;·&nbsp; <span>Author:</span> Patrick Dinehart
+        </p>
+
+        <div class="summary">
+            <strong>Deliverables completed today:</strong>
+            <ul style="margin-top: 8px; margin-bottom: 0;">
+                <!-- Add summary items here -->
+            </ul>
+        </div>
+
+        <!-- 1. NEW BLOG POST -->
+        <h2>1. New Blog Post Published</h2>
+        <div class="card">
+            <span class="badge blog">Blog</span>
+            <img src="New Home construction photograph where the framing is almost done in 2026.jpg" alt="New home construction with framing almost complete" class="report-img">
+        </div>
+
+        <hr>
+
+        <!-- 2. SOCIAL MEDIA PROMOTION -->
+        <h2>2. Social Media Promotion</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <img src="top flooring colors of 2026 pinterest post image.jpg" alt="Top flooring colors of 2026 Pinterest post" class="report-img">
+        </div>
+
+        <hr>
+
+        <!-- 3. DEVELOPER TASKS -->
+        <h2>3. Developer Tasks</h2>
+        <div class="card">
+            <span class="badge dev">Developer</span>
+            <img src="dev task waiting.png" alt="Developer task waiting status" class="report-img">
+        </div>
+
+        <hr>
+
+        <!-- 4. FACEBOOK ADS -->
+        <h2>4. Facebook Ads</h2>
+        <div class="card">
+            <span class="badge ads">Facebook Ads</span>
+            <img src="peachtree dusty gray ad image 2.jpg" alt="Peachtree Dusty Gray ad image" class="report-img">
+        </div>
+
+        <hr>
+
+        <!-- 5. GOOGLE ADS -->
+        <h2>5. Google Ads</h2>
+        <div class="card">
+            <span class="badge google-ads">Google Ads</span>
+            <img src="peachtree dusty gray ad image 2.jpg" alt="Peachtree Dusty Gray ad image" class="report-img">
+        </div>
+
+        <hr>
+
+        <!-- 6. SHOP PAGE UPDATE -->
+        <h2>6. Shop Page Update</h2>
+        <div class="card">
+            <span class="badge design">Design</span>
+            <div class="img-row">
+                <div>
+                    <img src="dark wood shop page.jpg" alt="Dark wood shop page" class="report-img" style="margin:0">
+                    <p class="img-caption">Dark Wood Shop Page</p>
+                </div>
+                <div>
+                    <img src="hickory shop page.jpg" alt="Hickory shop page" class="report-img" style="margin:0">
+                    <p class="img-caption">Hickory Shop Page</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 7. WEBSITE UPDATES / MAINTENANCE -->
+        <h2>7. Website Updates &amp; Maintenance</h2>
+        <div class="card">
+            <span class="badge maint">Maintenance</span>
+            <!-- Add content here -->
+        </div>
+
+        <hr>
+
+        <!-- 8. PADEN'S POSTS -->
+        <h2>8. Paden's Posts</h2>
+        <div class="card">
+            <span class="badge social">Social</span>
+            <div class="img-row">
+                <div>
+                    <img src="paden posts.jpg" alt="Paden's social media posts" class="report-img" style="margin:0">
+                    <p class="img-caption">Paden Posts</p>
+                </div>
+                <div>
+                    <img src="paden posts 2.jpg" alt="Paden's social media posts continued" class="report-img" style="margin:0">
+                    <p class="img-caption">Paden Posts 2</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 9. X (TWITTER) ADS -->
+        <h2>9. X (Twitter) Ads</h2>
+        <div class="card">
+            <span class="badge ads">X Ads</span>
+            <!-- Add content here -->
+        </div>
+
+    </div>
+</body>
+
+</html>
