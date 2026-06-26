@@ -3,7 +3,22 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(curl -s -L \"https://barkedupforestry.com/\" -o /tmp/buf_home.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -L \"https://barkedupforestry.com/wp-content/uploads/breakdance/css/global-settings.css?v=84bdd3a2c4cb14375649b14f7b23eaea\" -o /tmp/buf_global.css)",
+      "Bash(grep -oiE -- \"--[a-z0-9-]+:\\\\s*#[0-9a-f]{3,8};\" /tmp/buf_global.css)",
+      "Bash(curl -s -L \"https://barkedupforestry.com/wp-content/uploads/breakdance/css/post-88.css?v=a609ac81edfe0fd329081795406b1eca\" -o /tmp/buf_home_css.css)",
+      "Bash(grep -oiE \"#[0-9a-f]{3,8}\" /tmp/buf_home_css.css)",
+      "Bash(grep -oiE \"background[^;\\\\\"']*:[^;\\\\\"'}]*#[0-9a-f]{3,8}\" /tmp/buf_home.html)",
+      "Bash(grep -oiE \"#[0-9a-f]{3,8}\")",
+      "Bash(grep -oiE -- \"--bd[e]?-palette-color[a-z0-9-]*:\\\\s*#[0-9a-f]{3,8}\" /tmp/buf_home.html)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1440,820 --virtual-time-budget=8000 --screenshot=/tmp/buf_new_hero.png \"file:///h:/bf-clients/bu-forestry/pages/rightofway.html\")",
+      "Bash(cp /tmp/buf_new_hero.png \"/d/Documents/Client Projects/01-rcf/Code/Reports/rcf-reports/buf_new_hero.png\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1440,820 --virtual-time-budget=8000 --screenshot=/tmp/buf_new_hero2.png \"file:///h:/bf-clients/bu-forestry/pages/rightofway.html\")",
+      "Bash(cp /tmp/buf_new_hero2.png \"/d/Documents/Client Projects/01-rcf/Code/Reports/rcf-reports/buf_new_hero2.png\")",
+      "Bash(rm -f buf_new.png buf_new_hero.png buf_new_hero2.png)",
+      "Bash(ls buf_*.png)"
     ]
   }
 }
