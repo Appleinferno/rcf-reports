@@ -18,7 +18,10 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1440,820 --virtual-time-budget=8000 --screenshot=/tmp/buf_new_hero2.png \"file:///h:/bf-clients/bu-forestry/pages/rightofway.html\")",
       "Bash(cp /tmp/buf_new_hero2.png \"/d/Documents/Client Projects/01-rcf/Code/Reports/rcf-reports/buf_new_hero2.png\")",
       "Bash(rm -f buf_new.png buf_new_hero.png buf_new_hero2.png)",
-      "Bash(ls buf_*.png)"
+      "Bash(ls buf_*.png)",
+      "Bash(ls \"h:\\\\bf-clients\\\\bu-forestry\\\\pages\\\\\")",
+      "Read(//h/bf-clients/bu-forestry/**)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
