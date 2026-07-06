@@ -29,7 +29,10 @@
       "Bash(start \"\" \"d:\\\\Documents\\\\Client Projects\\\\01-rcf\\\\Code\\\\Reports\\\\rcf-reports\\\\2026\\\\07\\\\01\\\\right-of-way.html\")",
       "Read(//h/bf-clients/bu-forestry//**)",
       "Read(//h/bf-clients/bu-forestry/pages//**)",
-      "Bash(xargs -I{} sh -c 'echo {}; head -5 \"{}\"')"
+      "Bash(xargs -I{} sh -c 'echo {}; head -5 \"{}\"')",
+      "PowerShell(gh run list --repo Appleinferno/rcf-reports --limit 5)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:appleinferno.github.io)"
     ]
   }
 }
