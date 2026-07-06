@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Right of Way Clearing in Maiden, NC | Barked Up Forestry Mulching</title>
-    <meta name="description"
-        content="Professional right of way clearing for utility companies, pipelines, and property owners in Maiden, NC and surrounding Catawba County communities. Free estimates. Call (828) 320-4977.">
-    <style>
+<style>
         .buf-row-page,
         .buf-row-page *,
         .buf-row-page *::before,
@@ -19,6 +10,8 @@
         }
 
         .buf-row-page {
+            display: block;
+            width: 100%;
             background: #f7f5ef;
             color: #23281f;
             line-height: 1.65;
@@ -58,16 +51,35 @@
             color: #ffffff;
         }
 
+        /* Reusable centering utility - explicit width (not max-width) so the
+           block demands its full width inside Breakdance's flex layout;
+           the calc() provides 24px side gutters on small screens */
+        .buf-row-wrap {
+            width: min(900px, calc(100% - 48px));
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buf-row-wrap-wide {
+            width: min(1140px, calc(100% - 48px));
+        }
+
+        .buf-row-wrap-grid {
+            width: min(1080px, calc(100% - 48px));
+        }
+
+        .buf-row-wrap-narrow {
+            width: min(640px, calc(100% - 48px));
+        }
+
         /* Hero */
         .buf-row-hero {
             background: #1e3a28;
             color: #ffffff;
-            padding: 48px 24px 56px;
+            padding: 48px 0 56px;
         }
 
         .buf-row-hero-inner {
-            max-width: 1140px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 40px;
@@ -113,12 +125,7 @@
 
         /* Content sections */
         .buf-row-content-section {
-            padding: 48px 24px;
-        }
-
-        .buf-row-content-section-inner {
-            max-width: 900px;
-            margin: 0 auto;
+            padding: 48px 0;
         }
 
         .buf-row-content-section h2 {
@@ -197,14 +204,12 @@
         /* Related services */
         .buf-row-related-services {
             background: #ffffff;
-            padding: 48px 24px;
+            padding: 48px 0;
             border-top: 1px solid #e2ded2;
             border-bottom: 1px solid #e2ded2;
         }
 
         .buf-row-section-label {
-            max-width: 900px;
-            margin: 0 auto;
             font-size: 24px;
             font-weight: 800;
             color: #1e3a28;
@@ -212,7 +217,7 @@
         }
 
         .buf-row-related-services>p {
-            max-width: 620px;
+            width: min(620px, calc(100% - 48px));
             margin: 10px auto 30px;
             text-align: center;
             color: #5c6355;
@@ -220,8 +225,6 @@
         }
 
         .buf-row-related-grid {
-            max-width: 1080px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -250,13 +253,13 @@
 
         /* Testimonials */
         .buf-row-testimonials {
-            padding: 48px 24px;
+            padding: 48px 0;
             text-align: center;
         }
 
         .buf-row-testimonial-grid {
-            max-width: 900px;
-            margin: 26px auto 22px;
+            margin-top: 26px;
+            margin-bottom: 22px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
@@ -289,13 +292,8 @@
         .buf-row-cta-banner {
             background: #40290e;
             color: #ffffff;
-            padding: 50px 24px;
+            padding: 50px 0;
             text-align: center;
-        }
-
-        .buf-row-cta-content {
-            max-width: 640px;
-            margin: 0 auto;
         }
 
         .buf-row-cta-content .buf-row-section-label {
@@ -328,14 +326,11 @@
             }
         }
     </style>
-</head>
 
-<body>
-
-    <main class="buf-row-page">
+<section class="buf-row-page" aria-label="Right of Way Clearing in Maiden, NC">
 
         <section class="buf-row-hero">
-            <div class="buf-row-hero-inner">
+            <div class="buf-row-hero-inner buf-row-wrap buf-row-wrap-wide">
             <div>
                 <h1>Right of Way Clearing in Maiden, NC</h1>
                 <p>Barked Up Forestry Mulching keeps power line corridors, pipeline easements, fence lines, and
@@ -360,7 +355,7 @@
         </section>
 
         <section class="buf-row-content-section" id="what-is">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>What Is Right of Way Clearing?</h2>
             <p>A right of way is the strip of land a utility company, pipeline operator, road department, or
                 property
@@ -383,7 +378,7 @@
         </section>
 
         <section class="buf-row-content-section buf-row-alt" id="process">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>Our Right of Way Clearing Process</h2>
             <p>Every right of way project follows the same careful sequence, whether we're clearing a quarter-mile
                 fence
@@ -413,7 +408,7 @@
         </section>
 
         <section class="buf-row-content-section" id="benefits">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>Benefits of Professional Right of Way Clearing</h2>
             <p>A properly maintained right of way protects the infrastructure it surrounds and the people who depend
                 on
@@ -452,7 +447,7 @@
         </section>
 
         <section class="buf-row-content-section buf-row-alt" id="service-areas">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>Right of Way Clearing Service Areas</h2>
             <p>Based in Maiden, NC, we clear rights of way for utility companies, contractors, and property owners
                 throughout Catawba County and the surrounding communities below.</p>
@@ -479,7 +474,7 @@
         </section>
 
         <section class="buf-row-content-section" id="why-choose">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>Why Property Owners Choose Barked Up Forestry Mulching</h2>
             <p>We're a locally owned crew that treats every right of way like it runs through our own property.</p>
             <div class="buf-row-section-image">
@@ -501,7 +496,7 @@
         </section>
 
         <section class="buf-row-content-section buf-row-alt" id="faqs">
-            <div class="buf-row-content-section-inner">
+            <div class="buf-row-wrap">
             <h2>Right of Way Clearing FAQs</h2>
             <h3>How wide should a right of way be cleared?</h3>
             <p>Width depends on the easement agreement or utility standard governing the corridor — typically
@@ -522,10 +517,10 @@
         </section>
 
         <section class="buf-row-related-services">
-            <div class="buf-row-section-label">Explore Our Other Land Clearing Services</div>
+            <div class="buf-row-section-label buf-row-wrap">Explore Our Other Land Clearing Services</div>
             <p>Right of way clearing is one part of what we do — here's how we help property owners across Catawba
                 County get more out of their land.</p>
-            <div class="buf-row-related-grid">
+            <div class="buf-row-related-grid buf-row-wrap buf-row-wrap-grid">
                 <a href="/service/forestry-mulching/" class="buf-row-related-card">
                     <img src="https://barkedupforestry.com/wp-content/uploads/2026/06/Compact-Track-Loader-is-fitted-to-complete-forestry-mulching-tasks-for-barked-up-forestry-mulching-with-Josh-Carter-operating-the-machine.avif"
                         alt="Compact track loader fitted for forestry mulching tasks with Josh Carter operating the machine">
@@ -560,8 +555,8 @@
         </section>
 
         <section class="buf-row-testimonials">
-            <div class="buf-row-section-label">What Our Customers Say</div>
-            <div class="buf-row-testimonial-grid">
+            <div class="buf-row-section-label buf-row-wrap">What Our Customers Say</div>
+            <div class="buf-row-testimonial-grid buf-row-wrap">
                 <blockquote>
                     <p><em>"Barked Up cleared nearly a mile of pipeline right of way for us in under a week and left
                             the
@@ -578,7 +573,7 @@
         </section>
 
         <section class="buf-row-cta-banner">
-            <div class="buf-row-cta-content">
+            <div class="buf-row-cta-content buf-row-wrap buf-row-wrap-narrow">
                 <div class="buf-row-section-label">Ready to Clear Your Right of Way?</div>
                 <p>Get a free, no-obligation estimate from Maiden, NC's local right of way clearing specialists. We
                     respond fast and work around utility, pipeline, and municipal schedules.</p>
@@ -589,8 +584,4 @@
             </div>
         </section>
 
-    </main>
-
-</body>
-
-</html>
+    </section>
