@@ -32,7 +32,14 @@
       "Bash(xargs -I{} sh -c 'echo {}; head -5 \"{}\"')",
       "PowerShell(gh run list --repo Appleinferno/rcf-reports --limit 5)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:appleinferno.github.io)"
+      "WebFetch(domain:appleinferno.github.io)",
+      "WebFetch(domain:www.reallycheapfloors.com)",
+      "WebFetch(domain:reallycheapfloors.com)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://www.reallycheapfloors.com/prod/m/vinyl-plank-10212-peachtree-classic-dusty-gray/\" -o /tmp_page1.html)",
+      "Bash(wc -l /tmp_page1.html)",
+      "Bash(grep -o '[^\"'\"'\"']*\\\\.webp[^\"'\"'\"']*' /tmp_page1.html)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' https://www.reallycheapfloors.com/prod/m/vinyl-plank-10212-peachtree-classic-dusty-gray/ -o C:/Users/Patrick/AppData/Local/Temp/claude/d--Documents-Client-Projects-01-rcf-Code-Reports-rcf-reports/9a6ea834-99f3-4ffb-b918-a04ac7b811c0/scratchpad/page1.html)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' https://www.reallycheapfloors.com/prefinished-solid-6452-glossy-gunstock/ -o C:/Users/Patrick/AppData/Local/Temp/claude/d--Documents-Client-Projects-01-rcf-Code-Reports-rcf-reports/9a6ea834-99f3-4ffb-b918-a04ac7b811c0/scratchpad/page7.html)"
     ]
   }
 }
